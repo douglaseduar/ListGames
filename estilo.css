@@ -1,0 +1,40 @@
+.display-6 {
+font-size: 1rem;
+margin-top: -10px;
+text-transform: uppercase;
+margin-left: 1px;
+}
+h3 {
+    text-transform: uppercase;
+    padding-top: 7px;
+
+}
+.center {
+    text-align: center;
+}
+.p-3 {
+    padding-bottom: 0.2rem!important;
+}
+.center1 {
+    text-align: center;
+    padding: 30px;
+}
+.btn-light {
+    margin-left: 10px;
+    cursor:default!important;
+}
+h4 {
+    color: black;
+    font-size: 1rem;
+}
+@media only screen and (max-width: 768px) {
+    h3 {
+        font-size: 1.3rem;
+    }
+    .btn-light {
+
+        margin-bottom: 20px;
+        height: 70px;
+        width: 38%;
+}
+}
