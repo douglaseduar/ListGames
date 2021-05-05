@@ -2,7 +2,7 @@
 
 include_once("conexao.php");
 
-$result_usuarios = "SELECT * FROM jogo ORDER BY progresso, nome asc";
+$result_usuarios = "SELECT * FROM jogo WHERE progresso = 'asim' ||  progresso = 'asimcoop' || progresso = 'asimcoopplatina'  || progresso = 'asimplatina' ORDER BY progresso, nome asc";
 $resultado_usuarios = mysqli_query($conn, $result_usuarios);
 
 $QUERY = "SELECT progresso FROM jogo WHERE progresso = 'coopplatina' ||  progresso = 'asimplatina' || progresso = 'asimcoopplatina'";
@@ -89,10 +89,7 @@ $conta_linhas5 = mysqli_num_rows($executa_query5);
           </div>
           <?php } 
           ?>
-          <div class="col">
-            <div class="p-3 border bg-light" style="height:262.89px; border:none!important; background:none!important;" id="newzao"><div class="center"><br><br><br><a href="cadastrarjogo.php"><i class="bi bi-plus-circle" style="color: grey; font-size: 60pt;"></i></a>
-        </div>
-      </div>
+        
       </div>
             </div>
             </div>

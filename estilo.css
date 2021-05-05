@@ -21,11 +21,20 @@ h3 {
 }
 .btn-light {
     margin-left: 10px;
-    cursor:default!important;
 }
 h4 {
     color: black;
     font-size: 1rem;
+}
+h1 {
+    color: grey!important; 
+    line-height: 0;
+}
+.btn-light {
+    width: 155px;
+}
+.comeco {
+    display: flex;
 }
 @media only screen and (max-width: 768px) {
     h3 {
@@ -35,6 +44,24 @@ h4 {
 
         margin-bottom: 20px;
         height: 70px;
-        width: 38%;
+        width: 46%;
+        padding-right: 0;
+        padding-left: 0;
 }
+    #newzao {
+      width: 182px;  
+      height: 212.41px; 
+    }
+}
+.tutorial {
+    margin-top: 15px;
+}
+.alogin{
+    align-items: center;
+    display: flex;
+    width: 11%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    padding-top: 10%;
 }
