@@ -20,9 +20,17 @@
             <label>Desenvolvedora:  </label>
         <input type="text" name="corp" placeholder="digite aqui..." required="">
         <?php echo "<br><br>" ?>
-        <label class="itens">Progresso: </label>
-        <input type="text" name="progresso" placeholder="digite aqui..." required="" style="width:223px"></input>
-        <?php echo "<br><br>" ?>
+        <select class="form-select" id="inlineFormSelectPref">
+      <option value="1">Terminou</option>
+      <option value="2">Multiplayer</option>
+      <option value="3">Não Terminou</option>
+      <option value="4">Não terminou, apenas Multiplayer</option>
+      <option value="5">Terminou, e Multiplayer</option>
+      <option value="6">Platinou sem Multiplayer</option>
+      <option value="7">Platinou com Multiplayer</option>
+      <option value="8">Nunca jogou</option>
+    </select>
+        <?php echo "<br>" ?>
         <label class="itens">Imagem: </label>
         <input type="text" name="imagem" placeholder="digite aqui..." required="" style="width:234px"></input>
         <?php echo "<br><br>" ?>

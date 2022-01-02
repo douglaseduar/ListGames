@@ -4,14 +4,26 @@ margin-top: -10px;
 text-transform: uppercase;
 margin-left: 1px;
 }
-body {
-    background-color: #0dcaf0;
-}
-
 h3 {
     text-transform: uppercase;
     padding-top: 7px;
-
+}
+.editar{
+    position: relative;
+    float: right;
+    margin-top: -25px;
+    margin-right: 6px;
+    color: grey;
+    cursor: pointer;
+}
+h6{
+    position: relative;
+    background-color: rgb(161, 41, 41);
+    padding: 0px;
+    color: white;
+    margin-top: -19px;
+    text-align-last: center;
+    opacity: 0.9;
 }
 .center {
     text-align: center;
@@ -30,6 +42,9 @@ h4 {
     color: black;
     font-size: 1rem;
 }
+.img-fluid {
+    height: 122px!important;
+}
 h1 {
     color: grey!important; 
     line-height: 0;
@@ -39,6 +54,8 @@ h1 {
 }
 .comeco {
     display: flex;
+    place-content: center;
+    margin-top: 20vh;
 }
 .carousel-caption {
     bottom: -0.75rem!important;
@@ -142,6 +159,9 @@ h1 {
 }
 .esquerdo {
     width:40%; height:100%;
+}
+input{
+    width: 182px;
 }
 
 @media only screen and (max-width: 768px) {

@@ -43,6 +43,7 @@ $conta_linhas5 = mysqli_num_rows($executa_query5);
     <link href="estilo.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"> 
     <link rel="shortcut icon" href="imagem/controller.png" type="image/x-icon"/>
+    <script src="main.js"></script>
 <title>LISTA DE JOGOS</title>
 </head>
 <body>
@@ -71,13 +72,14 @@ error_reporting(0);
     $resultado_cursos = mysqli_query($conn, $result_cursos);
     
     while($dado = mysqli_fetch_array($resultado_cursos)){ ?>
-          <div class="col">
-            <div class="p-3 border bg-light" <?php if ($dado["progresso"] == "nao"){
+          <div class="col" id="<?php echo $dado["id"]; ?>">
+            <div class="p-3 border bg-light" style="min-height: 308px;"<?php if ($dado["progresso"] == "nao"){
       echo 'style="opacity: 0.7;"';}
       else if ($dado["progresso"] == "nunca"){
       echo 'style="opacity: 0.3;"';}
       else echo 'style="opacity: 1;"';
-      ?>><img src="imagem/<?php echo $dado["imagem"]; ?>.jpg" class="img-fluid">
+      ?>><img src="<?php echo $dado["imagem"]; ?>" class="img-fluid">
+      <h6><?php echo $dado["plataforma"]; ?></h6>
             <h3><?php echo $dado["nome"]; ?></h3>
             <h1 class="display-6"><?php echo $dado["corp"]; ?></h1>
             <div class="center">
@@ -87,7 +89,7 @@ error_reporting(0);
     echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"></i></div></div>';}
     else if($dado["progresso"] == "coop") { 
     echo '<i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></div></div>';}
-    else if($dado["progresso"] == "dnaocoop") { 
+    else if($dado["progresso"] == "naocoop") { 
     echo '<i class="bi bi-dash-circle-fill" style="color: orange; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div></div>';}
     else if($dado["progresso"] == "asimcoop"){
     echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div></div>';}
@@ -100,6 +102,7 @@ error_reporting(0);
     else {
     echo '<i class="bi bi-x-circle-fill" style="color: grey; font-size: 28pt;"></i></div></div>';}
     ?>
+    <a href="editar.php?id=<?php echo $dado["id"]; ?>"><i class="bi bi-pencil-square editar"></i></a>
     </div>
     <?php } 
 ?>
