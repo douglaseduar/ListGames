@@ -1,4 +1,4 @@
-🎮 Seu Banco de dados de Jogos
+# 🎮 Seu Banco de dados de Jogos
 ## Apresentação
 
 Sistema para cadastro e controle de seus jogos, onde você pode verificar quanto custa sua carteira, quanto tempo tem de jogo e etc. O sistema permite cadastro dos jogos, com as informações mais necessárias e possível edição do mesmo.  
