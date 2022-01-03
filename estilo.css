@@ -11,7 +11,28 @@ body {
 h3 {
     text-transform: uppercase;
     padding-top: 7px;
+<<<<<<< Updated upstream
 
+=======
+}
+.editar{
+    position: relative;
+    float: right;
+    margin-top: -25px;
+    margin-right: 6px;
+    color: grey;
+    cursor: pointer;
+    display: none;
+}
+h6{
+    position: relative;
+    background-color: rgb(161, 41, 41);
+    padding: 0px;
+    color: white;
+    margin-top: -19px;
+    text-align-last: center;
+    opacity: 0.9;
+>>>>>>> Stashed changes
 }
 .center {
     text-align: center;

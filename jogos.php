@@ -43,27 +43,43 @@ $conta_linhas5 = mysqli_num_rows($executa_query5);
     <link href="estilo.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"> 
     <link rel="shortcut icon" href="imagem/controller.png" type="image/x-icon"/>
+    <script src="main.js"></script>
 <title>LISTA DE JOGOS</title>
 </head>
 <body>
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand" style="padding-left: 25px;">Procurar por jogos</a>
+  <form class="form-inline" style="display:flex; padding-right:25px" action="jogos2.php" method="POST">
+    <input class="form-control mr-sm-2" name="pesquisando" type="search" placeholder="jogo" aria-label="Search" style="margin-right: 10px;">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
+  </form>
+</nav>
 <div class="center1">
-<a href="jogos.php"><button type="button" class="btn btn-light"><i class="bi bi-joystick" style="color: red; font-size: 20pt;"><h4><?php echo $conta_linhas5;?> JOGOS</h4></i></button></a>
+<a href="jogos2.php"><button type="button" class="btn btn-light"><i class="bi bi-joystick" style="color: red; font-size: 20pt;"><h4><?php echo $conta_linhas5;?> JOGOS</h4></i></button></a>
 <a href="sim.php"><button type="button" class="btn btn-light"><i class="bi bi-check-circle-fill" style="color: green; font-size: 20pt;"><h4><?php echo $conta_linhas1;?> JOGADO</h4></i></button></a>
 <a href="coop.php"><button type="button" class="btn btn-light"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 20pt;"><h4><?php echo $conta_linhas2;?> MULTIPLAYER</h4></i></button></a>
 <a href="nao.php"><button type="button" class="btn btn-light"><i class="bi bi-dash-circle-fill" style="color: orange; font-size: 20pt;"><h4><?php echo $conta_linhas3;?> INCOMPLETO</h4></i></button></a>
 <a href="platina.php"><button type="button" class="btn btn-light"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 20pt;"><h4><?php echo $conta_linhas;?> PLATINADO</h4></i></button></a>
 <a href="nunca.php"><button type="button" class="btn btn-light"><i class="bi bi-x-circle-fill" style="color: grey; font-size: 20pt;"><h4><?php echo $conta_linhas4;?> NÃO JOGUEI</h4></i></button></a>
 </div>
-    <div class="container">
-        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-        <?php while($dado = mysqli_fetch_assoc($resultado_usuarios)){ ?>
-          <div class="col">
-            <div class="p-3 border bg-light" <?php if ($dado["progresso"] == "nao"){
+<div class="container">
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+<?php
+ini_set('display_errors', 0 );
+error_reporting(0);
+    $pesquisar = $_POST['pesquisando'];
+    $result_cursos = "SELECT * FROM jogo WHERE nome LIKE '%$pesquisar%' ORDER BY progresso, nome asc";
+    $resultado_cursos = mysqli_query($conn, $result_cursos);
+    
+    while($dado = mysqli_fetch_array($resultado_cursos)){ ?>
+          <div class="col" onmouseenter="aparecer(<?php echo $dado['id']; ?>)" onmouseleave="escondedr(<?php echo $dado['id']; ?>)">
+            <div class="p-3 border bg-light" style="min-height: 308px;"<?php if ($dado["progresso"] == "nao"){
       echo 'style="opacity: 0.7;"';}
       else if ($dado["progresso"] == "nunca"){
       echo 'style="opacity: 0.3;"';}
       else echo 'style="opacity: 1;"';
-      ?>><img src="imagem/<?php echo $dado["imagem"]; ?>.jpg" class="img-fluid">
+      ?>><img src="<?php echo $dado["imagem"]; ?>" class="img-fluid">
+      <h6><?php echo $dado["plataforma"]; ?></h6>
             <h3><?php echo $dado["nome"]; ?></h3>
             <h1 class="display-6"><?php echo $dado["corp"]; ?></h1>
             <div class="center">
@@ -73,7 +89,7 @@ $conta_linhas5 = mysqli_num_rows($executa_query5);
     echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"></i></div></div>';}
     else if($dado["progresso"] == "coop") { 
     echo '<i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></div></div>';}
-    else if($dado["progresso"] == "dnaocoop") { 
+    else if($dado["progresso"] == "naocoop") { 
     echo '<i class="bi bi-dash-circle-fill" style="color: orange; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div></div>';}
     else if($dado["progresso"] == "asimcoop"){
     echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div></div>';}
@@ -85,10 +101,11 @@ $conta_linhas5 = mysqli_num_rows($executa_query5);
     echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></i></div></div>';}
     else {
     echo '<i class="bi bi-x-circle-fill" style="color: grey; font-size: 28pt;"></i></div></div>';}
-  ?>
-          </div>
-          <?php } 
-          ?>
+    ?>
+    <a href="editar.php?id=<?php echo $dado["id"]; ?>"><i class="bi bi-pencil-square editar"></i></a>
+    </div>
+    <?php } 
+?>
           <div class="col">
             <div class="p-3 border bg-light" style="height:262.89px; border:none!important; background:none!important;" id="newzao"><div class="center"><br><br><br><a href="cadastrarjogo.php"><i class="bi bi-plus-circle" style="color: grey; font-size: 60pt;"></i></a>
         </div>
@@ -98,4 +115,3 @@ $conta_linhas5 = mysqli_num_rows($executa_query5);
             </div>
 </body>
 </html>
-
