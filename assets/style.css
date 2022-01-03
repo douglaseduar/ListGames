@@ -29,6 +29,12 @@ h6{
 }
 .center {
     text-align: center;
+    position: relative;
+    margin-top: -65px;
+    padding-bottom: 10px;
+}
+.img-fluid {
+    max-height: 119px!important;
 }
 .p-3 {
     padding-bottom: 0.2rem!important;

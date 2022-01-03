@@ -40,7 +40,7 @@ $conta_linhas5 = mysqli_num_rows($executa_query5);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-    <link href="estilo.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"> 
     <link rel="shortcut icon" href="imagem/controller.png" type="image/x-icon"/>
 <title>LISTA DE JOGOS</title>
@@ -67,31 +67,31 @@ $conta_linhas5 = mysqli_num_rows($executa_query5);
       <h6><?php echo $dado["plataforma"]; ?></h6>
             <h3><?php echo $dado["nome"]; ?></h3>
             <h1 class="display-6"><?php echo $dado["corp"]; ?></h1>
+            </div>
             <div class="center">
             <?php if ($dado["progresso"] == "nao"){
-    echo '<i class="bi bi-dash-circle-fill" style="color: orange; font-size: 28pt;"></i></div></div>';}
+    echo '<i class="bi bi-dash-circle-fill" style="color: orange; font-size: 28pt;"></i></div>';}
     else if($dado["progresso"] == "asim"){
-    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"></i></div></div>';}
+    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"></i></div>';}
     else if($dado["progresso"] == "coop") { 
-    echo '<i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></div></div>';}
+    echo '<i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></div>';}
     else if($dado["progresso"] == "naocoop") { 
-    echo '<i class="bi bi-dash-circle-fill" style="color: orange; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div></div>';}
+    echo '<i class="bi bi-dash-circle-fill" style="color: orange; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div>';}
     else if($dado["progresso"] == "asimcoop"){
-    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div></div>';}
+    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div>';}
     else if($dado["progresso"] == "asimplatina"){
-    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></div></div>';}
+    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></div>';}
     else if($dado["progresso"] == "coopplatina") { 
-    echo '<i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></div></div>';}
+    echo '<i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></div>';}
     else if($dado["progresso"] == "asimcoop"){
-    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></i></div></div>';}
+    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></i></div>';}
     else {
-    echo '<i class="bi bi-x-circle-fill" style="color: grey; font-size: 28pt;"></i></div></div>';}
+    echo '<i class="bi bi-x-circle-fill" style="color: grey; font-size: 28pt;"></i></div>';}
     ?>
-    <a href="editar.php?id=<?php echo $dado["id"]; ?>"><i class="bi bi-pencil-square editar"></i></a>
+    <a href="editar.php?id=<?php echo $dado["id"]; ?>"><i class="bi bi-pencil-square editar" id="<?php echo $dado['id']; ?>" ></i></a>
     </div>
     <?php } 
-?>
-        
+?> 
       </div>
             </div>
             </div>

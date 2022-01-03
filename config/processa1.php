@@ -54,7 +54,7 @@ $valoraux = str_replace(',', '.', $valor);
 $result = mysqli_query($conn, $sql);
 
 
-   $result_usuario = "INSERT INTO jogo (nome, corp, progresso, imagem, plataforma, valor, tempo) VALUES ('$nome', '$corp', '$progresso', '$imagem', '$plataforma', '$valoraux', '$tempoaux')";
+   $result_usuario = "INSERT INTO jogo (nome, corp, progresso, imagem, plataforma, valor, tempo) VALUES ('$nome', '$corp', '$progressoaux', '$imagem', '$plataformaaux', '$valoraux', '$tempoaux')";
    $resultado_usuario = mysqli_query($conn, $result_usuario);
    
    if(mysqli_affected_rows($conn)) {

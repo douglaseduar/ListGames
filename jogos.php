@@ -58,13 +58,14 @@ $conta_linhas5 = mysqli_num_rows($executa_query5);
     <link href="assets/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="imagem/controller.png" type="image/x-icon"/>
-    <script src="assets/main.js"></script>
+    <script src="assets/main.js" defer></script>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1986/1986447.png" type="image/x-icon">
 <title>LISTA DE JOGOS</title>
 </head>
 <body>
 <nav class="navbar navbar-light bg-light justify-content-between">
   <a class="navbar-brand" style="padding-left: 25px;">Procurar por jogos</a>
-  <form class="form-inline" style="display:flex; padding-right:25px" action="jogos2.php" method="POST">
+  <form class="form-inline" style="display:flex; padding-right:25px" action="jogos.php" method="POST">
     <input class="form-control mr-sm-2" name="pesquisando" type="search" placeholder="jogo" aria-label="Search" style="margin-right: 10px;">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
   </form>
@@ -90,41 +91,40 @@ error_reporting(0);
     
     while($dado = mysqli_fetch_array($resultado_cursos)){ ?>
           <div class="col" onmouseenter="aparecer(<?php echo $dado['id']; ?>)" onmouseleave="esconder(<?php echo $dado['id']; ?>)">
-            <div class="p-3 border bg-light" style="min-height: 308px;"<?php if ($dado["progresso"] == "nao"){
-      echo 'style="opacity: 0.7;"';}
-      else if ($dado["progresso"] == "nunca"){
-      echo 'style="opacity: 0.3;"';}
-      else echo 'style="opacity: 1;"';
-      ?>><img src="<?php echo $dado["imagem"]; ?>" class="img-fluid">
+            <div class="p-3 border bg-light" style='min-height: 308px; <?php if ($dado["progresso"] == "nunca"){
+      echo 'opacity: 0.6;';}
+      else echo 'opacity: 1;';
+      ?>'><img src="<?php echo $dado["imagem"]; ?>" class="img-fluid">
       <h6><?php echo $dado["plataforma"]; ?></h6>
             <h3><?php echo $dado["nome"]; ?></h3>
             <h1 class="display-6"><?php echo $dado["corp"]; ?></h1>
+            </div>
             <div class="center">
             <?php if ($dado["progresso"] == "nao"){
-    echo '<i class="bi bi-dash-circle-fill" style="color: orange; font-size: 28pt;"></i></div></div>';}
+    echo '<i class="bi bi-dash-circle-fill" style="color: orange; font-size: 28pt;"></i></div>';}
     else if($dado["progresso"] == "asim"){
-    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"></i></div></div>';}
+    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"></i></div>';}
     else if($dado["progresso"] == "coop") { 
-    echo '<i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></div></div>';}
+    echo '<i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></div>';}
     else if($dado["progresso"] == "naocoop") { 
-    echo '<i class="bi bi-dash-circle-fill" style="color: orange; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div></div>';}
+    echo '<i class="bi bi-dash-circle-fill" style="color: orange; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div>';}
     else if($dado["progresso"] == "asimcoop"){
-    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div></div>';}
+    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"></i></i></div>';}
     else if($dado["progresso"] == "asimplatina"){
-    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></div></div>';}
+    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></div>';}
     else if($dado["progresso"] == "coopplatina") { 
-    echo '<i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></div></div>';}
+    echo '<i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></div>';}
     else if($dado["progresso"] == "asimcoop"){
-    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></i></div></div>';}
+    echo '<i class="bi bi-check-circle-fill" style="color: green; font-size: 28pt;"><i class="bi bi-record-circle-fill" style="color: blue; font-size: 28pt;"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 28pt;"></i></i></i></div>';}
     else {
-    echo '<i class="bi bi-x-circle-fill" style="color: grey; font-size: 28pt;"></i></div></div>';}
+    echo '<i class="bi bi-x-circle-fill" style="color: grey; font-size: 28pt;"></i></div>';}
     ?>
     <a href="editar.php?id=<?php echo $dado["id"]; ?>"><i class="bi bi-pencil-square editar" id="<?php echo $dado['id']; ?>" ></i></a>
     </div>
     <?php } 
 ?>
           <div class="col">
-            <div class="p-3 border bg-light" style="height:262.89px; border:none!important; background:none!important;" id="newzao"><div class="center"><br><br><br><a href="cadastrarjogo.php"><i class="bi bi-plus-circle" style="color: grey; font-size: 60pt;"></i></a>
+            <div class="p-3 border bg-light" style="height:262.89px; border:none!important; background:none!important;" id="newzao"><div class="center"><br><br><br><a href="cadastro.html"><i class="bi bi-plus-circle" style="color: grey; font-size: 60pt;"></i></a>
         </div>
       </div>
       </div>
