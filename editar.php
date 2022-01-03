@@ -1,3 +1,13 @@
+<?php
+include_once("config/conexao.php");
+
+$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+$result_usuario = "SELECT * FROM jogo WHERE id = '$id'";
+$resultado_usuario = mysqli_query($conn, $result_usuario);
+$row_usuario = mysqli_fetch_assoc($resultado_usuario);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,12 +23,13 @@
     <div class="comeco">
         
 
-        <form method="POST" action="config/processa1.php" style="padding:22px; border: solid 1px;">
+        <form method="POST" action="config/processaed.php" style="padding:22px; border: solid 1px;">
             <label>Nome: </label>
-        <input type="text" name="nome" placeholder="digite aqui..." required="" style="width:252px">
+        <input type="text" name="nome" placeholder="digite aqui..." required="" style="width:252px" value="<?php echo $row_usuario['nome'] ?>">
         <br><br>
+        <input type="hidden" name="id" value="<?php echo $id?>">
             <label>Desenvolvedora:  </label>
-        <input type="text" name="corp" placeholder="digite aqui..." required="">
+        <input type="text" name="corp" placeholder="digite aqui..." required="" value="<?php echo $row_usuario['corp'] ?>">
         <br><br>
         <label class="visually" for="inlineFormSelectPref">Progresso</label>
         <select class="form-select" id="inlineFormSelectPref" name="progresso">
@@ -33,13 +44,13 @@
     </select>
         <br>
         <label class="itens">Imagem: </label>
-        <input type="text" name="imagem" placeholder="digite url..." required="" style="width:234px"></input>
+        <input type="text" name="imagem" placeholder="digite url..." required="" style="width:234px" value="<?php echo $row_usuario['imagem'] ?>"></input>
         <br><br>
         <label class="itens">Valor: </label>
-        <input type="text" name="valor" placeholder="digite o valor..." style="width:234px"></input>
+        <input type="text" name="valor" placeholder="digite o valor..." style="width:234px" value="<?php echo $row_usuario['valor'] ?>"></input>
         <br><br>
         <label class="itens">Tempo de jogo: </label>
-        <input type="text" name="tempo" placeholder="digite o tempo de jogo" style="width:234px"></input>
+        <input type="text" name="tempo" placeholder="digite o tempo de jogo" style="width:234px" value="<?php echo $row_usuario['tempo'] ?>"></input>
         <br><br>
         <label class="visually" for="inlineFormSelectPref">Plataforma</label>
         <select class="form-select" id="inlineFormSelectPref" name="plataforma">
@@ -49,8 +60,9 @@
       <option value="3">MOBILE</option>
     </select>
     <br>
-        <input type="submit" value="CADASTRAR" class="btn btn-primary" style="width:299px">
+        <input type="submit" value="EDITAR" class="btn btn-primary" style="width:299px">
         
     </form><br><br><br>
+
 </body>
 </html>

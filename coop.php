@@ -1,6 +1,6 @@
 <?php
 
-include_once("conexao.php");
+include_once("config/conexao.php");
 
 $result_usuarios = "SELECT * FROM jogo WHERE progresso = 'coop' ||  progresso = 'asimcoop' || progresso = 'asimcoopplatina'  || progresso = 'coopplatina'  || progresso = 'dnaocoop' ORDER BY progresso, nome asc";
 $resultado_usuarios = mysqli_query($conn, $result_usuarios);

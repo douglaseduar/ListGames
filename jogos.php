@@ -1,6 +1,6 @@
 <?php
 
-include_once("conexao.php");
+include_once("config/conexao.php");
 
 $result_usuarios = "SELECT * FROM jogo ORDER BY progresso, nome asc";
 $resultado_usuarios = mysqli_query($conn, $result_usuarios);
@@ -25,6 +25,21 @@ $QUERY4 = "SELECT progresso FROM jogo WHERE progresso = 'nunca'";
 $executa_query4 = mysqli_query($conn, $QUERY4);
 $conta_linhas4 = mysqli_num_rows($executa_query4);
 
+$valoraux = 0;
+
+$QUERY6 = "SELECT valor FROM jogo";
+$executa_query6 = mysqli_query($conn, $QUERY6);
+while($dado1 = mysqli_fetch_array($executa_query6)){
+$valoraux += $dado1['valor'];
+}
+$tempoaux = 0;
+$QUERY7 = "SELECT tempo FROM jogo";
+$executa_query7 = mysqli_query($conn, $QUERY7);
+while($dado2 = mysqli_fetch_array($executa_query7)){
+$tempoaux += $dado2['tempo'];
+}
+
+
 $QUERY5 = "SELECT progresso FROM jogo";
 $executa_query5 = mysqli_query($conn, $QUERY5);
 $conta_linhas5 = mysqli_num_rows($executa_query5);
@@ -40,10 +55,10 @@ $conta_linhas5 = mysqli_num_rows($executa_query5);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-    <link href="estilo.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"> 
+    <link href="assets/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="imagem/controller.png" type="image/x-icon"/>
-    <script src="main.js"></script>
+    <script src="assets/main.js"></script>
 <title>LISTA DE JOGOS</title>
 </head>
 <body>
@@ -61,6 +76,8 @@ $conta_linhas5 = mysqli_num_rows($executa_query5);
 <a href="nao.php"><button type="button" class="btn btn-light"><i class="bi bi-dash-circle-fill" style="color: orange; font-size: 20pt;"><h4><?php echo $conta_linhas3;?> INCOMPLETO</h4></i></button></a>
 <a href="platina.php"><button type="button" class="btn btn-light"><i class="bi bi-trophy-fill" style="color: DeepSkyBlue; font-size: 20pt;"><h4><?php echo $conta_linhas;?> PLATINADO</h4></i></button></a>
 <a href="nunca.php"><button type="button" class="btn btn-light"><i class="bi bi-x-circle-fill" style="color: grey; font-size: 20pt;"><h4><?php echo $conta_linhas4;?> NÃO JOGUEI</h4></i></button></a>
+<button type="button" class="btn btn-light"><i class="bi bi-cash-coin" style="color: darkorchid; font-size: 20pt;"><h4>R$ <?php echo $valoraux;?></h4></i></button>
+<button type="button" class="btn btn-light"><i class="bi bi-clock-fill" style="color: coral; font-size: 20pt;"><h4><?php echo $tempoaux;?> h</h4></i></button>
 </div>
 <div class="container">
     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
@@ -72,7 +89,7 @@ error_reporting(0);
     $resultado_cursos = mysqli_query($conn, $result_cursos);
     
     while($dado = mysqli_fetch_array($resultado_cursos)){ ?>
-          <div class="col" onmouseenter="aparecer(<?php echo $dado['id']; ?>)" onmouseleave="escondedr(<?php echo $dado['id']; ?>)">
+          <div class="col" onmouseenter="aparecer(<?php echo $dado['id']; ?>)" onmouseleave="esconder(<?php echo $dado['id']; ?>)">
             <div class="p-3 border bg-light" style="min-height: 308px;"<?php if ($dado["progresso"] == "nao"){
       echo 'style="opacity: 0.7;"';}
       else if ($dado["progresso"] == "nunca"){
@@ -102,7 +119,7 @@ error_reporting(0);
     else {
     echo '<i class="bi bi-x-circle-fill" style="color: grey; font-size: 28pt;"></i></div></div>';}
     ?>
-    <a href="editar.php?id=<?php echo $dado["id"]; ?>"><i class="bi bi-pencil-square editar"></i></a>
+    <a href="editar.php?id=<?php echo $dado["id"]; ?>"><i class="bi bi-pencil-square editar" id="<?php echo $dado['id']; ?>" ></i></a>
     </div>
     <?php } 
 ?>
