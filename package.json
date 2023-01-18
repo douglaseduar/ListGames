@@ -1,0 +1,29 @@
+{
+  "name": "list-games",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Sistema para cadastro e controle de seus jogos, onde você pode verificar quanto custa sua carteira, quanto tempo tem de jogo e etc. O sistema permite cadastro dos jogos, com as informações mais necessárias e possível edição do mesmo.  \r <br>\r <img src=\"assets/captura.png\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglaseduar/list-games.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/douglaseduar/list-games/issues"
+  },
+  "homepage": "https://github.com/douglaseduar/list-games#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "howlongtobeat": "^1.7.0",
+    "mysql2": "^3.0.1",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}
