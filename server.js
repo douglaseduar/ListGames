@@ -8,8 +8,6 @@ import { HowLongToBeatService, HowLongToBeatEntry } from 'howlongtobeat';
 let hltbService = new HowLongToBeatService();
 
 
-// hltbService.search('Nioh').then(result => console.log(result));
-
 
 const app = express();
 var __filename = url.fileURLToPath(
@@ -31,7 +29,13 @@ app.use(express.static('assets/css'));
 app.use(express.static('assets/js'));
 app.use(express.static('assets/img'));
 
-app.get('/', (req, res) => {
+app.get('/cadastro', (req, res) => {
     res.header('Content-Type', 'text/html');
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/cadastro.html');
   })
+
+app.get('/pesqjogo/:jogo', (req, res) => {
+  
+  hltbService.search(req.params.jogo).then(result => res.send(result));
+  
+})    
