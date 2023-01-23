@@ -95,15 +95,28 @@ app.get('/cadastro', isLoggedIn,  (req, res) => {
     res.sendFile(__dirname + '/cadastro.html');
   })
 
-app.get('/pesqjogo/:jogo', (req, res) => {
+app.get('/pesqjogo/:jogo', isLoggedIn, (req, res) => {
   
   hltbService.search(req.params.jogo).then(result => res.send(result));
   
 })    
 
+app.get('/cadastrar', isLoggedIn,  (req, res) => {
+  res.header('Content-Type', 'text/html');
+  res.sendFile(__dirname + '/cadastrar.html');
+})
 
+app.get('/price', async (req, res) => {
+  const link = `https://www.cheapshark.com/api/1.0/deals?title=    &pageSize=1&pageNumber=0`;
+  request(link, (err, response, html) => {
+    if (!err) {
+      const json1 = JSON.parse(html);
+      res.send(json1.results);
 
+    }
+  });
 
+})
 
 
 
