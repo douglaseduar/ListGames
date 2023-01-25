@@ -8,6 +8,8 @@ import path from 'path';
 import fileupload from 'express-fileupload'
 import { HowLongToBeatService, HowLongToBeatEntry } from 'howlongtobeat';
 import dotenv from 'dotenv';
+import puppeteer from 'puppeteer';
+import request from 'request';
 
 let hltbService = new HowLongToBeatService();
 
@@ -106,19 +108,44 @@ app.get('/cadastrar', isLoggedIn,  (req, res) => {
   res.sendFile(__dirname + '/cadastrar.html');
 })
 
-app.get('/price', async (req, res) => {
-  const link = `https://www.cheapshark.com/api/1.0/deals?title=    &pageSize=1&pageNumber=0`;
+app.get('/price/:nome', async (req, res) => {
+  let precojogo = await pesquisa_jogo(req.params.nome)
+  const link = `https://economia.awesomeapi.com.br/json/last/USD-BRL`;
   request(link, (err, response, html) => {
     if (!err) {
       const json1 = JSON.parse(html);
-      res.send(json1.results);
+      res.send([{ dinheiro: precojogo*json1.USDBRL.high }]);
 
     }
   });
+  
+
+  
 
 })
 
+async function pesquisa_jogo(jogo) {
 
+  const browser = await puppeteer.launch({
+    headless: true
+  });
+  const page = await browser.newPage();
+  await page.setUserAgent('Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0');
+  await page.setViewport({
+    width: 1280,
+    height: 1800
+  })
+  await page.goto("https://www.pricecharting.com/search-products?q="+ jogo + "&type=prices");
+  const resultado = await page.evaluate(() => {
+
+    let rnome = document.querySelectorAll("td.title > a")[0].textContent
+    let rpreco = document.querySelectorAll("td.price.numeric.cib_price > span")[0].textContent
+      
+      console.log(rnome)
+        return rpreco
+        
+}); await browser.close();
+ return resultado.replace("$", "");}
 
 
 app.get('*', isLoggedIn, (req, res) => {

@@ -13,45 +13,47 @@
 <body>
     <div class="container">
 
-        <form method="POST" action="config/processa1.php" style="padding:22px; border: solid 1px;">
-            <label>Nome: </label>
-        <input type="text" name="nome" placeholder="digite aqui..." required="" style="width:252px">
-        <br><br>
-            <label>Desenvolvedora:  </label>
-        <input type="text" name="corp" placeholder="digite aqui..." required="">
-        <br><br>
-        <label class="visually" for="inlineFormSelectPref">Progresso</label>
-        <select class="form-select" id="inlineFormSelectPref" name="progresso">
-      <option value="1">Jogou</option>
-      <option value="2">Multiplayer</option>
-      <option value="3">Não Terminou</option>
-      <option value="4">Não terminou, apenas Multiplayer</option>
-      <option value="5">Terminou com Multiplayer</option>
-      <option value="6">Platinou sem Multiplayer</option>
-      <option value="7">Platinou com Multiplayer</option>
-      <option value="8">Nunca jogou</option>
-    </select>
-        <br>
-        <label class="itens">Imagem: </label>
-        <input type="text" name="imagem" placeholder="digite url..." required="" style="width:234px"></input>
-        <br><br>
-        <label class="itens">Valor: </label>
-        <input type="text" name="valor" placeholder="digite o valor..." style="width:234px"></input>
-        <br><br>
-        <label class="itens">Tempo de jogo: </label>
-        <input type="text" name="tempo" placeholder="digite o tempo de jogo" style="width:234px"></input>
-        <br><br>
-        <label class="visually" for="inlineFormSelectPref">Plataforma</label>
-        <select class="form-select" id="inlineFormSelectPref" name="plataforma">
-      <option value="1">PS4</option>
-      <option value="4">PS3</option>
-      <option value="2">PC</option>
-      <option value="3">MOBILE</option>
-    </select>
-    <br>
-        <input type="submit" value="CADASTRAR" class="btn btn-primary" style="width:299px">
-        
-    </form>
+        <form id="formulario">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Nome do Jogo</label>
+              <input type="text" class="form-control" id="nome" placeholder="Ex. Nioh">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Imagem do Jogo</label>
+              <input type="text" class="form-control" id="url" placeholder="www.exemplo.com/foto.jpg">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput3">Tempo de Jogo</label>
+                <input type="text" class="form-control" id="hora" placeholder="Ex. 7 horas">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput4">Valor do Jogo</label>
+                <input type="text" class="form-control" id="valor" placeholder="Ex. R$88,00">
+              </div>
+              <p id="idjogo"></p>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline3">Toggle this custom radio</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline4">Or toggle this other custom radio</label>
+              </div>
+              <select class="custom-select">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+          </form>
 
     </div>
 </body>
