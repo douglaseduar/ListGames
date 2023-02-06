@@ -36,3 +36,11 @@ function preencher(){
     document.querySelector("#idjogo").textContent = "id no HTLB: " + pid.replace("id", "");
 
 }
+
+function OnChangeCheckbox (checkbox) {
+  if (checkbox.checked) {
+    document.querySelector("#multi").classList.remove("d-none")
+  } else {
+    document.querySelector("#multi").classList.add("d-none")
+  }
+}

@@ -77,7 +77,7 @@ app.get('/google',
 
 app.get('/callback',
     passport.authenticate('google', {
-        successRedirect: '/cadastro',
+        successRedirect: '/verificacao',
         failureRedirect: '/google/failure'
     })
 );
@@ -91,6 +91,22 @@ app.get('/google/failure', async (req, res) => {
         }
     });
 });
+
+
+app.get('/verificacao', isLoggedIn, async (req, res) => {
+  let foto = req.user.photos[0].value;
+  let nome = req.user.displayName;
+  let idfacebook = req.user.id;
+  let resposta = await database.getLogin(idfacebook);
+  if(resposta.length == 0){
+    let insert =  await database.insertUser(idfacebook, nome, foto);
+    if (insert.numero = !0) {
+      res.redirect('/configuracao');
+  }}else{
+    res.redirect('/cadastro');
+  }});   
+
+
 
 app.get('/cadastro', isLoggedIn,  (req, res) => {
     res.header('Content-Type', 'text/html');
