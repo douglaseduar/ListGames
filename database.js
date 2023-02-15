@@ -27,6 +27,15 @@ database.insertUser = async function (id_cliente, nome, foto) {
   }
 }
 
+database.cadastrarjogo = async function (vnome, vurl, vhora, vvalor, vplataforma, vid, vprogresso, vmultiplayer, id) {
+  let [data] = await database.con.execute('INSERT INTO jogos (htlb,	nome, valor, tempo, plataforma, progresso, multiplayer, fk_jogador_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+    [vurl, vnome, vvalor, vhora, vplataforma, vprogresso, vmultiplayer, id]);
+
+  return {
+    'numero': data.insertId
+  }
+}
+
 
 
 export default database;

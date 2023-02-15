@@ -16,19 +16,19 @@
         <form id="formulario">
             <div class="form-group">
               <label for="formGroupExampleInput">Nome do Jogo</label>
-              <input type="text" class="form-control" id="nome" placeholder="Ex. Nioh">
+              <input type="text" class="form-control" id="nome" name="nome" placeholder="Ex. Nioh">
             </div>
             <div class="form-group">
               <label for="formGroupExampleInput2">Imagem do Jogo</label>
-              <input type="text" class="form-control" id="url" placeholder="www.exemplo.com/foto.jpg">
+              <input type="text" class="form-control" id="url" name="url" placeholder="www.exemplo.com/foto.jpg">
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput3">Tempo de Jogo</label>
-                <input type="text" class="form-control" id="hora" placeholder="Ex. 7 horas">
+                <input type="text" class="form-control" id="hora" name="hora" placeholder="Ex. 7 horas">
               </div>
               <div class="form-group">
                 <label for="formGroupExampleInput4">Valor do Jogo</label>
-                <input type="text" class="form-control" id="valor" placeholder="Ex. R$88,00">
+                <input type="text" class="form-control" id="valor" name="valor" placeholder="Ex. R$88,00">
               </div>
               <p id="idjogo"></p>
               <div class="checks d-flex">
@@ -49,11 +49,11 @@
                   <label class="form-check-label" for="inlineCheckbox3">Multiplayer</label>
                 </div>
                 <div class="form-group multi">
-                <input type="text" class="form-control d-none" id="multi" placeholder="nick no Multiplayer">
+                <input type="text" class="form-control d-none" id="multi" name="multi" placeholder="nick no Multiplayer">
               </div> <br><br>
             </div>
             <div class="input-group mb-3">
-              <select class="custom-select">
+              <select class="custom-select" name="plataforma">
                 <option selected>Selecione a plataforma</option>
                 <option value="ps5">PS5</option>
                 <option value="ps4">PS4</option>
@@ -65,7 +65,7 @@
           </form>
         </div>
         <br>
-        <button type="button" class="btn btn-success">Cadastrar</button>
+        <button type="button" class="btn btn-success" id="enviar">Cadastrar</button>
     </div>
 </body>
 </html>

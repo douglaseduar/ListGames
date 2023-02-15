@@ -44,3 +44,49 @@ function OnChangeCheckbox (checkbox) {
     document.querySelector("#multi").classList.add("d-none")
   }
 }
+
+
+document.querySelector("#enviar").addEventListener("click", enviando);
+var aux = " ";
+
+async function enviando (event){
+  event.preventDefault();
+
+  let form = document.querySelector("#formulario");
+
+  let nome = form.nome.value;
+  let url = form.url.value;
+  let hora = form.hora.value;
+  let valor = form.valor.value;
+  let plataforma = form.plataforma.value;
+  let idjogo = document.querySelector("#idjogo").textContent;
+  let multi = form.multi.value;
+
+  if (document.querySelector("#inlineCheckbox1").checked) {
+    aux = "completo";
+} else if (document.querySelector("#inlineCheckbox2").checked) {
+    aux = "terminado";
+} else if (document.querySelector("#inlineCheckbox3").checked) {
+    aux = "nunca";
+}
+
+  let header = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json; charset=UTF-8'
+    },
+    body: JSON.stringify({
+        vnome: nome,
+        vurl: url,
+        vhora: hora, 
+        vvalor: valor, 
+        vplataforma: plataforma,
+        vid: idjogo, 
+        vmulti: multi, 
+        vprogresso: aux
+
+    })
+}
+await fetch('/jogou', header);
+
+}

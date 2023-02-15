@@ -106,6 +106,10 @@ app.get('/verificacao', isLoggedIn, async (req, res) => {
     res.redirect('/cadastro');
   }});   
 
+app.post('/jogou', isLoggedIn, async (req, res) => {
+  let {vnome, vurl, vhora, vvalor, vplataforma, vid, vmulti, vprogresso} = req.body;
+  await database.cadastrarjogo(vnome, vurl, vhora, vvalor, vplataforma, vid, vprogresso, vmulti, req.user.id);
+  })
 
 
 app.get('/cadastro', isLoggedIn,  (req, res) => {
