@@ -116,6 +116,22 @@ app.get('/cadastro', isLoggedIn,  (req, res) => {
     res.header('Content-Type', 'text/html');
     res.sendFile(__dirname + '/cadastro.html');
   })
+  app.get('/dados', isLoggedIn,  async (req, res) => {
+
+    let todo = await database.gettodos(req.user.id);
+    let platina = await database.getplatinas(req.user.id);
+    let hora = await database.gethoras(req.user.id);
+    let valor = await database.getvalores(req.user.id);
+    res.send([{
+      nome: req.user.displayName,
+      foto: req.user.picture, 
+      todos: todo.length, 
+      platinas: platina.length,
+      horas: hora[0].qtd + "h",
+      valores: 'R$ ' + valor[0].quanto
+
+    }]);
+  })
 
 app.get('/pesqjogo/:jogo', isLoggedIn, (req, res) => {
   
@@ -126,6 +142,10 @@ app.get('/pesqjogo/:jogo', isLoggedIn, (req, res) => {
 app.get('/cadastrar', isLoggedIn,  (req, res) => {
   res.header('Content-Type', 'text/html');
   res.sendFile(__dirname + '/cadastrar.html');
+})
+app.get('/perfil', isLoggedIn,  (req, res) => {
+  res.header('Content-Type', 'text/html');
+  res.sendFile(__dirname + '/lista.html');
 })
 
 app.get('/price/:nome', async (req, res) => {

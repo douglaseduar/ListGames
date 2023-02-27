@@ -79,7 +79,7 @@ async function enviando (event){
         vnome: nome,
         vurl: url,
         vhora: hora, 
-        vvalor: valor, 
+        vvalor: valor.replace('R$ ', ""), 
         vplataforma: plataforma,
         vid: idjogo, 
         vmulti: multi, 

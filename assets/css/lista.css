@@ -1,0 +1,34 @@
+.menu{
+    background-color: rgb(20, 20, 20);
+    border-radius: 30px;
+    height: 500px;
+    max-width: 300px;
+    margin-left: 30px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
+.nome{
+    text-transform: uppercase;
+}
+
+#fotomenu{
+    border-radius: 300px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+.numeros {   
+     display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 30px 10px; 
+    grid-template-areas: 
+    "jogos platina"
+    "valor valor"
+    "tempo tempo"; 
+      font-size: 25pt;
+  }
+  .jogos { grid-area: jogos; }
+  .platina { grid-area: platina; }
+  .valor { grid-area: valor; }
+  .tempo { grid-area: tempo; }

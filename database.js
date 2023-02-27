@@ -35,7 +35,26 @@ database.cadastrarjogo = async function (vnome, vurl, vhora, vvalor, vplataforma
     'numero': data.insertId
   }
 }
+database.gettodos = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ?', [sessionid]);
 
+  return rows;
+}
+database.getplatinas = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE progresso = "completo" AND fk_jogador_id = ?', [sessionid]);
+
+  return rows;
+}
+database.gethoras = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT SUM(tempo) as qtd FROM jogos WHERE progresso = "completo" OR progresso = "terminado" AND fk_jogador_id = ?', [sessionid]);
+
+  return rows;
+}
+database.getvalores = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT SUM(valor) as quanto FROM jogos WHERE fk_jogador_id = ?', [sessionid]);
+
+  return rows;
+}
 
 
 export default database;
