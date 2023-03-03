@@ -69,6 +69,7 @@ async function enviando (event){
 } else if (document.querySelector("#inlineCheckbox3").checked) {
     aux = "nunca";
 }
+let valoraux = valor.replace('R$ ', "")
 
   let header = {
     method: 'POST',
@@ -79,7 +80,7 @@ async function enviando (event){
         vnome: nome,
         vurl: url,
         vhora: hora, 
-        vvalor: valor.replace('R$ ', ""), 
+        vvalor: valoraux, 
         vplataforma: plataforma,
         vid: idjogo, 
         vmulti: multi, 
@@ -87,6 +88,7 @@ async function enviando (event){
 
     })
 }
-await fetch('/jogou', header);
+fetch('/jogou', header);
+location = "/perfil";
 
 }

@@ -12,6 +12,19 @@
     <title>Perfil</title>
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light" style="place-content: center;">
+        <form class="form-inline" id="pesquisar">
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" placeholder="Procurar por jogos"
+                    aria-describedby="button-addon2" name="consultaplaca">
+                <button class="btn btn-outline-success" type="submit" id="button-addon2"
+                    style="padding: 0px 10px!important;font-size: 18pt;"><i
+                        class="bi bi-arrow-right-circle-fill"></i></button>
+            </div>
+        </form>
+    </nav>
+
+    <div class="background">
     <div class="menu">
         <img src="https://avatars.githubusercontent.com/u/64625746?v=4" width="110" id="fotomenu" alt="" srcset="">
         <h2 class="nome pt-2"></h2>
@@ -23,5 +36,9 @@
             <div class="tempo"></div>
           </div>
     </div>
+    <div class="lista row row-cols-1 row-cols-md-3 g-4 mt-3" id="lista">
+        
+    </div>
+</div>
 </body>
 </html>

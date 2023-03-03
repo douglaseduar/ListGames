@@ -116,6 +116,7 @@ app.get('/cadastro', isLoggedIn,  (req, res) => {
     res.header('Content-Type', 'text/html');
     res.sendFile(__dirname + '/cadastro.html');
   })
+
   app.get('/dados', isLoggedIn,  async (req, res) => {
 
     let todo = await database.gettodos(req.user.id);
@@ -131,6 +132,10 @@ app.get('/cadastro', isLoggedIn,  (req, res) => {
       valores: 'R$ ' + valor[0].quanto
 
     }]);
+  })
+
+  app.get('/getjogos', isLoggedIn,  async (req, res) => {
+    res.send(await database.gettodos(req.user.id));
   })
 
 app.get('/pesqjogo/:jogo', isLoggedIn, (req, res) => {
