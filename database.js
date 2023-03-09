@@ -40,6 +40,11 @@ database.gettodos = async function (sessionid) {
 
   return rows;
 }
+database.getpesquisa = async function (sessionid, pesquisa) {
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND nome LIKE CONCAT("%", ?,  "%")', [sessionid, pesquisa]);
+
+  return rows;
+}
 database.getplatinas = async function (sessionid) {
   let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE progresso = "completo" AND fk_jogador_id = ?', [sessionid]);
 

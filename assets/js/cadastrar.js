@@ -63,13 +63,13 @@ async function enviando (event){
   let multi = form.multi.value;
 
   if (document.querySelector("#inlineCheckbox1").checked) {
-    aux = "completo";
+    aux = "COMPLETO";
 } else if (document.querySelector("#inlineCheckbox2").checked) {
-    aux = "terminado";
+    aux = "HISTÓRIA";
 } else if (document.querySelector("#inlineCheckbox3").checked) {
-    aux = "nunca";
+    aux = "NÃO JOGUEI";
 }
-let valoraux = valor.replace('R$ ', "")
+let valoraux = valor.split('R$ ');
 
   let header = {
     method: 'POST',
@@ -80,7 +80,7 @@ let valoraux = valor.replace('R$ ', "")
         vnome: nome,
         vurl: url,
         vhora: hora, 
-        vvalor: valoraux, 
+        vvalor: valoraux[1], 
         vplataforma: plataforma,
         vid: idjogo, 
         vmulti: multi, 

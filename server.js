@@ -129,7 +129,7 @@ app.get('/cadastro', isLoggedIn,  (req, res) => {
       todos: todo.length, 
       platinas: platina.length,
       horas: hora[0].qtd + "h",
-      valores: 'R$ ' + valor[0].quanto
+      valores: 'R$' + valor[0].quanto
 
     }]);
   })
@@ -143,6 +143,9 @@ app.get('/pesqjogo/:jogo', isLoggedIn, (req, res) => {
   hltbService.search(req.params.jogo).then(result => res.send(result));
   
 })    
+app.get('/jogopesq/:pesquisa', isLoggedIn,  async (req, res) => {
+  res.send(await database.getpesquisa(req.user.id, req.params.pesquisa));
+})
 
 app.get('/cadastrar', isLoggedIn,  (req, res) => {
   res.header('Content-Type', 'text/html');
