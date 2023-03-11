@@ -48,9 +48,12 @@
   
   .menu { grid-area: menu; }
   
-  .lista { grid-area: lista; 
-    grid-row-gap: 350px;}
-
+  .lista1 { grid-area: lista; 
+   }
+  .lista{
+    /* grid-row-gap: 350px; */
+    content-visibility: visible;
+  }
   .card-img-top{
     max-height: 250px;
     max-width: 250px;
@@ -102,4 +105,24 @@
   .conteudo{
     position: relative;
     perspective: 1000px;
+    height: 360px;
+  }
+
+  .novo{
+    background-color: gainsboro;
+    color: rgb(20, 20, 20);
+    margin-top: 25px;
+    position: fixed;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    width: 300px;
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .jplatinado, .jplatinado1, .jplatinado2{
+    background-color: gainsboro;
+    width: 98%;
+    height: 2px;
+    cursor: pointer;
+    transition: 1ms;
   }

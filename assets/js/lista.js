@@ -27,7 +27,7 @@ function preencherdados(foto, nome, todos, platinas, horas, valores){
 
 function preencherjogos(){
 
-    fetch('/getjogos/')
+    fetch('/getjogosc/')
     .then((res) => res.json())
     .then((res) => {
         for (jogo of res) {
@@ -80,7 +80,7 @@ function preencherjogo(url, nome, plataforma, valor, tempo, multiplayer, progres
     container.appendChild(front)
     container.appendChild(back)
 
-    document.querySelector("#lista").appendChild(container);
+    document.querySelector("#listac").appendChild(container);
 
 }
 
@@ -115,3 +115,171 @@ function carregarjogo(pesquisa) {
     }
 
 }
+
+document.querySelector(".jplatinado").addEventListener("click", esconderc);
+
+function esconderc(){
+    var x = document.getElementById("listac");
+    var y = document.getElementById("flechac");
+    if (x.style.contentVisibility  == "hidden") {
+      x.style.contentVisibility  = "visible";
+      y.classList.remove("bi-caret-down-fill");
+      y.classList.add("bi-caret-up-fill")
+    } else {
+      x.style.contentVisibility  = "hidden";
+      y.classList.add("bi-caret-down-fill");
+      y.classList.remove("bi-caret-up-fill")
+    }
+  }
+
+
+
+  function preencherjogos1(){
+
+    fetch('/getjogost/')
+    .then((res) => res.json())
+    .then((res) => {
+        for (jogo of res) {
+            preencherjogo1(jogo.htlb, jogo.nome, jogo.plataforma, jogo.valor, jogo.tempo, jogo.multiplayer, jogo.progresso);
+        }
+
+    })
+}
+
+preencherjogos1();
+
+function preencherjogo1(url, nome, plataforma, valor, tempo, multiplayer, progresso){
+
+    let container = document.createElement("div");
+    container.className = "conteudo";
+    let card = document.createElement("div");
+    card.style.width = "14rem";
+    card.className = "card";
+    card.style.height = "350px";
+    card.style.margin = "5px";
+    let card1 = document.createElement("div");
+    card1.style.width = "14rem";
+    card1.className = "cardback";
+    card1.style.margin = "5px";
+    card1.style.height = "350px";
+    card1.innerHTML = "<h5> " + nome + "</h5><br><h2 style='font-size: 5pt;'>--------------------------------------------------------------------</h2><br>TEMPO: " + tempo + "h<br>VALOR: R$ " + valor + "<br> NICK: " + multiplayer + "<br> PROGRESSO: " + progresso + "<br>PLATAFORMA: " + plataforma;
+    let front = document.createElement("div");
+    front.className = "front";
+    let back = document.createElement("div");
+    back.className = "back";
+    let foto = document.createElement("img");
+    foto.src = url;
+    foto.className = "card-img-top";
+    let div = document.createElement("div");
+    div.className = "card-body";
+    let texto = document.createElement("h5")
+    texto.className = "card-text";
+    texto.textContent = nome;
+    texto.style.textAlign = "center";
+    let plata = document.createElement("div");
+    plata.className = "plata";
+    plata.textContent = plataforma
+
+    card.appendChild(foto);
+    div.appendChild(texto);
+    div.appendChild(plata);
+    card.appendChild(div);
+    front.appendChild(card);
+    back.appendChild(card1);
+    container.appendChild(front)
+    container.appendChild(back)
+
+    document.querySelector("#listat").appendChild(container);
+
+}
+
+document.querySelector(".jplatinado1").addEventListener("click", escondert);
+
+function escondert(){
+    var x = document.getElementById("listat");
+    var y = document.getElementById("flechat");
+    if (x.style.contentVisibility  == "hidden") {
+      x.style.contentVisibility  = "visible";
+      y.classList.remove("bi-caret-down-fill");
+      y.classList.add("bi-caret-up-fill")
+    } else {
+      x.style.contentVisibility  = "hidden";
+      y.classList.add("bi-caret-down-fill");
+      y.classList.remove("bi-caret-up-fill")
+    }
+  }
+
+  function preencherjogos2(){
+
+    fetch('/getjogosn/')
+    .then((res) => res.json())
+    .then((res) => {
+        for (jogo of res) {
+            preencherjogo2(jogo.htlb, jogo.nome, jogo.plataforma, jogo.valor, jogo.tempo, jogo.multiplayer, jogo.progresso);
+        }
+
+    })
+}
+
+preencherjogos2();
+
+function preencherjogo2(url, nome, plataforma, valor, tempo, multiplayer, progresso){
+
+    let container = document.createElement("div");
+    container.className = "conteudo";
+    let card = document.createElement("div");
+    card.style.width = "14rem";
+    card.className = "card";
+    card.style.height = "350px";
+    card.style.margin = "5px";
+    let card1 = document.createElement("div");
+    card1.style.width = "14rem";
+    card1.className = "cardback";
+    card1.style.margin = "5px";
+    card1.style.height = "350px";
+    card1.innerHTML = "<h5> " + nome + "</h5><br><h2 style='font-size: 5pt;'>--------------------------------------------------------------------</h2><br>TEMPO: " + tempo + "h<br>VALOR: R$ " + valor + "<br> NICK: " + multiplayer + "<br> PROGRESSO: " + progresso + "<br>PLATAFORMA: " + plataforma;
+    let front = document.createElement("div");
+    front.className = "front";
+    let back = document.createElement("div");
+    back.className = "back";
+    let foto = document.createElement("img");
+    foto.src = url;
+    foto.className = "card-img-top";
+    let div = document.createElement("div");
+    div.className = "card-body";
+    let texto = document.createElement("h5")
+    texto.className = "card-text";
+    texto.textContent = nome;
+    texto.style.textAlign = "center";
+    let plata = document.createElement("div");
+    plata.className = "plata";
+    plata.textContent = plataforma
+
+    card.appendChild(foto);
+    div.appendChild(texto);
+    div.appendChild(plata);
+    card.appendChild(div);
+    front.appendChild(card);
+    back.appendChild(card1);
+    container.appendChild(front)
+    container.appendChild(back)
+
+    document.querySelector("#listan").appendChild(container);
+
+}
+
+document.querySelector(".jplatinado2").addEventListener("click", escondern);
+
+function escondern(){
+    var x = document.getElementById("listan");
+    var y = document.getElementById("flechan");
+    if (x.style.contentVisibility  == "hidden") {
+      x.style.contentVisibility  = "visible";
+      y.classList.remove("bi-caret-down-fill");
+      y.classList.add("bi-caret-up-fill")
+    } else {
+      x.style.contentVisibility  = "hidden";
+      y.classList.add("bi-caret-down-fill");
+      y.classList.remove("bi-caret-up-fill")
+    }
+  }

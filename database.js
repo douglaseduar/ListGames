@@ -40,6 +40,22 @@ database.gettodos = async function (sessionid) {
 
   return rows;
 }
+database.getjogosc = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND progresso = "COMPLETO" ORDER BY nome', [sessionid]);
+
+  return rows;
+}
+database.getjogosn = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND progresso = "NÃO JOGUEI" ORDER BY nome', [sessionid]);
+
+  return rows;
+}
+database.getjogost = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND progresso = "HISTÓRIA" ORDER BY nome', [sessionid]);
+
+  return rows;
+}
+
 database.getpesquisa = async function (sessionid, pesquisa) {
   let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND nome LIKE CONCAT("%", ?,  "%")', [sessionid, pesquisa]);
 

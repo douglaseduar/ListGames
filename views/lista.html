@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="lista.css">
     <script src="lista.js" defer></script>
     <title>Perfil</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/626/626540.png" type="image/x-icon">
 </head>
 <body>
     <nav class="navbar navbar-light bg-light" style="place-content: center;">
@@ -25,7 +26,7 @@
     </nav>
 
     <div class="background">
-    <div class="menu">
+    <div class="menu hadow-lg rounded">
         <img src="https://avatars.githubusercontent.com/u/64625746?v=4" width="110" id="fotomenu" alt="" srcset="">
         <h2 class="nome pt-2"></h2>
         <h2 class="pt-2" style="font-size: 5pt;">--------------------------------------------------------------------------</h2>
@@ -35,9 +36,18 @@
             <div class="valor"></div>
             <div class="tempo"></div>
           </div>
+          <div class="novo"><h6> CADASTRAR NOVO JOGO</h6> <a href="/cadastro"><i class="bi bi-plus-circle" style="font-size: 22pt; color: black;"></i></a></div>
     </div>
-    <div class="lista row row-cols-1 row-cols-md-5 g-3 mt-3" id="lista">
-        
+    <div class="lista1">
+    <div class="jplatinado"><h5> COMPLETOS <i class="bi bi-caret-down-fill" id="flechac"></i></h5></div>
+    <div class="lista row row-cols-1 row-cols-md-5 g-3 mt-3" id="listac">
+    </div>
+    <div class="jplatinado1 mt-5"><h5> APENAS HISTÓRIA <i class="bi bi-caret-down-fill" id="flechat"></i></h5></div>
+    <div class="lista row row-cols-1 row-cols-md-5 g-3 mt-3" id="listat">
+    </div>
+    <div class="jplatinado2 mt-5"><h5> NUNCA JOGADO <i class="bi bi-caret-down-fill" id="flechan"></i></h5></div>
+    <div class="lista row row-cols-1 row-cols-md-5 g-3 mt-3" id="listan">
+    </div>
     </div>
 </div>
 </body>

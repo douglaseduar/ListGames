@@ -134,8 +134,14 @@ app.get('/cadastro', isLoggedIn,  (req, res) => {
     }]);
   })
 
-  app.get('/getjogos', isLoggedIn,  async (req, res) => {
-    res.send(await database.gettodos(req.user.id));
+  app.get('/getjogosc', isLoggedIn,  async (req, res) => {
+    res.send(await database.getjogosc(req.user.id));
+  })
+  app.get('/getjogost', isLoggedIn,  async (req, res) => {
+    res.send(await database.getjogost(req.user.id));
+  })
+  app.get('/getjogosn', isLoggedIn,  async (req, res) => {
+    res.send(await database.getjogosn(req.user.id));
   })
 
 app.get('/pesqjogo/:jogo', isLoggedIn, (req, res) => {
