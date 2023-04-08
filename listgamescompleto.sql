@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08-Abr-2023 às 03:59
+-- Tempo de geração: 08-Abr-2023 às 21:15
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.4.27
 
@@ -129,7 +129,98 @@ INSERT INTO `jogos` (`id`, `htlb`, `nome`, `valor`, `tempo`, `plataforma`, `prog
 (79, 'https://howlongtobeat.com/games/410218-lastblade2_large.jpg', 'The Last Blade 2', '22,11', '1', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
 (80, 'https://howlongtobeat.com/games/250px-Kofxiiips3.jpg', 'The King of Fighters ', '37,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
 (81, 'https://howlongtobeat.com/games/Metal_Slug_3.png', 'Metal Slug 3', '14,99', '2', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
-(82, 'https://howlongtobeat.com/games/62621_SNK_40th_Anniversary_Collection.jpg', 'SNK 40th Anniversary Collection', '59,99', '2', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308');
+(82, 'https://howlongtobeat.com/games/62621_SNK_40th_Anniversary_Collection.jpg', 'SNK 40th Anniversary Collection', '59,99', '2', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(83, 'https://howlongtobeat.com/games/255px-Last_Blade_(cover).jpg', 'The Last Blade', '19,99', '1', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(84, 'https://howlongtobeat.com/games/metal_slug_X.jpg', 'Metal Slug X', '15,99', '1', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(85, 'https://howlongtobeat.com/games/TwinkleStarSprites_frontcover.png', 'Twinkle Star Sprites', '15,99', '1', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(86, 'https://howlongtobeat.com/games/225px-Real_Bout_2_(cover).jpg', 'Real Bout Fatal Fury 2: The Newcomers', '0,00', '1', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(87, 'https://howlongtobeat.com/games/61488_Breathedge.jpg', 'Breathedge', '79,99', '16', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(88, 'https://howlongtobeat.com/games/100032_Lawn_Mowing_Simulator.jpg', 'Lawn Mowing Simulator', '59,99', '23', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(89, 'https://howlongtobeat.com/games/84835_Chicken_Police.jpg', 'Chicken Police', '37,99', '7', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(90, 'https://howlongtobeat.com/games/111005_Faraway_2_Jungle_Escape.jpg', 'Faraway 2: Jungle Escape', '16,99', '0', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(91, 'https://howlongtobeat.com/games/115708_Doors_Paradox.jpg', 'Doors: Paradox', '46,99', '4', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(92, 'https://howlongtobeat.com/games/89567_The_Amazing_American_Circus.jpg', 'The Amazing American Circus', '59,99', '12', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(93, 'https://howlongtobeat.com/games/82168_Banners_of_Ruin.jpg', 'Banners of Ruin', '37,99', '7', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(94, 'https://howlongtobeat.com/games/Brothers_A_Tale_of_Two_Sons_cover_art.jpg', 'Brothers: A Tale of Two Sons', '6,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(95, 'https://howlongtobeat.com/games/63173_Desert_Child.jpg', 'Desert Child', '37,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(96, 'https://howlongtobeat.com/games/83373_Spinch.jpg', 'Spinch', '46,99', '5', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(97, 'https://howlongtobeat.com/games/WhisperingWillows_292x136.jpg', 'Whispering Willows', '19,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(98, 'https://howlongtobeat.com/games/69038_Etherborn.jpg', 'Etherborn', '52,99', '2', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(99, 'https://howlongtobeat.com/games/48621_Last_Day_of_June.jpg', 'Last Day of June', '9,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(100, 'https://howlongtobeat.com/games/108241_Indiana_Jones_and_the_Last_Crusade.jpg', 'Indiana Jones and the Last Crusade', '12,99', '4', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(101, 'https://howlongtobeat.com/games/82743_WRC_9.jpg', 'WRC 9: FIA World Rally Championship', '19,99', '18', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(102, 'https://howlongtobeat.com/games/250px-LOOM_Cover_Art.jpg', 'Loom', '12,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(103, 'https://howlongtobeat.com/games/105664_Heros_Hour.jpg', 'Hero\'s Hour', '34,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(104, 'https://howlongtobeat.com/games/69579_Horace_(2019).jpg', 'Horace', '11,99', '14', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(105, 'https://howlongtobeat.com/games/108020_Castle_on_the_Coast.jpg', 'Castle on the Coast', '37,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(106, 'https://howlongtobeat.com/games/99825_Defend_the_Rook.jpg', 'Defend the Rook', '34,99', '2', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(107, 'https://howlongtobeat.com/games/The_Dig_artwork.jpg', 'The Dig', '12,99', '7', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(108, 'https://howlongtobeat.com/games/65820_We_The_Revolution.jpg', 'We. The Revolution', '49,99', '13', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(109, 'https://howlongtobeat.com/games/Zak_McKracken_artwork.jpg', 'Zak McKracken and the Alien Mindbenders', '11,99', '5', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(110, 'https://howlongtobeat.com/games/93259_Beasts_of_Maravilla_Island.jpg', 'Beasts of Maravilla Island', '19,99', '2', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(111, 'https://howlongtobeat.com/games/69534_Recompile_(2020).jpg', 'Recompile', '45,99', '5', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(112, 'https://howlongtobeat.com/games/68579_ScourgeBringer.jpg', 'ScourgeBringer', '37,99', '9', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(113, 'https://howlongtobeat.com/games/64047_Fell_Seal_Arbiters_Mark.jpg', 'Fell Seal: Arbiter\'s Mark', '89,99', '37', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(114, 'https://howlongtobeat.com/games/84662_Fishing_North_Atlantic.jpg', 'Fishing: North Atlantic', '59,99', '7', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(115, 'https://howlongtobeat.com/games/83906_Suzerain.jpg', 'Suzerain', '46,99', '10', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(116, 'https://howlongtobeat.com/games/250px-Maniac_Mansion_artwork.jpg', 'Maniac Mansion', '11,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(117, 'https://howlongtobeat.com/games/Star_Wars_-_Republic_Commando_Coverart.png', 'Star Wars: Republic Commando', '19,99', '9', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(118, 'https://howlongtobeat.com/games/Jabox.jpg', 'Star Wars Jedi Knight: Jedi Academy', '19,99', '10', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(119, 'https://howlongtobeat.com/games/Jedi_Outcast_pc_cover.jpg', 'Star Wars Jedi Knight II: Jedi Outcast', '19,99', '13', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(120, 'https://howlongtobeat.com/games/44498_Clouds_', 'Clouds ', '32,99', '6', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(121, 'https://howlongtobeat.com/games/91005_The_Darkside_Detective_A_Fumble_in_the_Dark.jpg', 'The Darkside Detective: A Fumble in the Dark', '46,99', '8', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(122, 'https://howlongtobeat.com/games/47682_The_Darkside_Detective.jpg', 'The Darkside Detective', '46,00', '4', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(123, 'https://howlongtobeat.com/games/Rain_World_header.jpg', 'Rain World', '77,99', '22', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(124, 'https://howlongtobeat.com/games/90468_8Doors_Arums_Afterlife_Adventure.jpg', '8Doors: Arum\'s Afterlife Adventure', '37,99', '9', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(125, 'https://howlongtobeat.com/games/40258_The_Metronomicon.jpg', 'The Metronomicon', '0,00', '6', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(126, 'https://howlongtobeat.com/games/Samurai_Shodown_II_cover.jpg', 'Samurai Shodown II', '0,00', '1', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(127, 'https://howlongtobeat.com/games/40473_Serial_Cleaner.jpg', 'Serial Cleaner', '0,00', '5', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(128, 'https://howlongtobeat.com/games/250px-Fatal_Fury_Special_(cover).jpg', 'Fatal Fury Special', '0,00', '1', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(129, 'https://howlongtobeat.com/games/38008_HUE.jpg', 'HUE', '27,11', '5', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(130, 'https://howlongtobeat.com/games/74471_Metal_Unit.jpg', 'Metal Unit', '27,11', '7', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(131, 'https://howlongtobeat.com/games/40492_Manual_Samuel.jpg', 'Manual Samuel', '0,00', '2', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(132, 'https://howlongtobeat.com/games/51841_The_Crows_Eye.jpg', 'The Crow\'s Eye', '32,11', '4', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(133, 'https://howlongtobeat.com/games/225px-Metal_Slug_2_(cover).jpg', 'Metal Slug 2', '12,99', '1', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(134, 'https://howlongtobeat.com/games/ProjectGianaSplashArt.jpg', 'Giana Sisters: Twisted Dreams', '6,00', '7', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(135, 'https://howlongtobeat.com/games/66375_Pumped_bmx_pro.jfif', 'Pumped BMX Pro', '5,00', '15', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(136, 'https://howlongtobeat.com/games/47424_Death_Squared.jpg', 'Death Squared', '28,11', '6', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(137, 'https://howlongtobeat.com/games/The_King_of_Fighters_2000_-_poster.jpg', 'The King of Fighters 2000', '0,00', '1', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(138, 'https://howlongtobeat.com/games/38775_10_Second_Ninja_X.jpg', '10 Second Ninja X', '0,00', '2', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(139, 'https://howlongtobeat.com/games/The_King_of_Fighters_2002_(cover).jpg', 'The King of Fighters 2002', '0,00', '1', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(140, 'https://howlongtobeat.com/games/85787_Gone_Viral.jpg', 'Gone Viral', '59,99', '0', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(141, 'https://howlongtobeat.com/games/2222510-box_bbr_large.png', 'Bang Bang Racing', '16,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(142, 'https://howlongtobeat.com/games/81108_Across_The_Grooves.jpg', 'Across The Grooves', '47,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(143, 'https://howlongtobeat.com/games/67977_Astrologaster.jpg', 'Astrologaster', '20,00', '6', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(144, 'https://howlongtobeat.com/games/85354_Calico.jpg', 'Calico', '22,11', '4', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(145, 'https://howlongtobeat.com/games/70659_Wrc_8.jfif', 'WRC 8', '69,99', '17', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(146, 'https://howlongtobeat.com/games/250px-Escape_from_Monkey_Island_artwork.jpg', 'Escape from Monkey Island', '14,99', '10', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(147, 'https://howlongtobeat.com/games/89414_Mail_Mole.jpg', 'Mail Mole', '28,11', '4', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(148, 'https://howlongtobeat.com/games/48142_Cat_Quest.jpg', 'Cat Quest', '8,00', '6', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(149, 'https://howlongtobeat.com/games/94633_Out_of_Line.jpg', 'Out of Line', '27,11', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(150, 'https://howlongtobeat.com/games/67694_Shattered_-_Tale_of_the_Forgotten_King.jpg', 'Shattered - Tale of the Forgotten King', '59,99', '15', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(151, 'https://howlongtobeat.com/games/250px-The_Curse_of_Monkey_Island_artwork.jpg', 'The Curse of Monkey Island', '14,99', '8', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(152, 'https://howlongtobeat.com/games/80383_Turnip_Boy_Commits_Tax_Evasion.jpg', 'Turnip Boy Commits Tax Evasion', '28,11', '2', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(153, 'https://howlongtobeat.com/games/98531_Guild_of_Ascension.jpg', 'Guild of Ascension', '37,99', '0', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(154, 'https://howlongtobeat.com/games/71950_Nanotale_-_Typing_Chronicles.jpg', 'Nanotale - Typing Chronicles', '49,99', '4', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(155, 'https://howlongtobeat.com/games/82604_As_Far_As_The_Eye.jpg', 'As Far As The Eye', '47,99', '4', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(156, 'https://howlongtobeat.com/games/92533_Golazo_Soccer_League.jpg', 'Golazo! Soccer League', '17,99', '1', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(157, 'https://howlongtobeat.com/games/indigo-prophecy-box-art.jpg', 'Indigo Prophecy / Fahrenheit', '22,11', '8', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(158, 'https://howlongtobeat.com/games/45584_abandon_ship.jpg', 'Abandon Ship', '77,99', '20', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(159, 'https://howlongtobeat.com/games/77229_Paper_Beast.jpg', 'Paper Beast', '45,99', '3', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(160, 'https://howlongtobeat.com/games/74940_In_Other_Waters.jpg', 'In Other Waters', '46,99', '5', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(161, 'https://howlongtobeat.com/games/60043_two_point_hospital.jpg', 'Two Point Hospital', '119,00', '39', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(162, 'https://howlongtobeat.com/games/51200_WRC_7.jpg', 'WRC 7: World Rally', '47,99', '15', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(163, 'https://howlongtobeat.com/games/37397_Youtubers_Life.jpg', 'Youtubers Life', '69,99', '12', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(164, 'https://howlongtobeat.com/games/73064_Tools_Up.jpg', 'Tools Up!', '37,99', '5', 'PC-AMAZON', 'NÃO JOGUEI', '', '115629454420567283308'),
+(165, 'https://howlongtobeat.com/games/255px-Sports_Champions.png', 'Sports Champions', '0,00', '17', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
+(166, 'https://howlongtobeat.com/games/NBA_2K12_cover.jpg', 'NBA 2K12', '0,00', '60', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
+(167, 'https://howlongtobeat.com/games/Duke_Nukem_Forever_Box_art.jpg', 'Duke Nukem Forever', '30,00', '9', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
+(168, 'https://howlongtobeat.com/games/256px-Skate-3-Boxart.jpg', 'Skate 3', '0,00', '9', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
+(169, 'https://howlongtobeat.com/games/GranTurismo6.jpg', 'Gran Turismo 6', '50,00', '45', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
+(170, 'https://howlongtobeat.com/games/Battlefield_4.jpg', 'Battlefield 4 ', '49,99', '6', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
+(171, 'https://howlongtobeat.com/games/Just_Dance_2014_Official_NTSC_Cover_Art.jpg', 'Just Dance 2014', '0,00', '5', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
+(172, 'https://howlongtobeat.com/games/Plants_vs._zombies_Garden_Warfare_cover.jpg', 'Plants vs. Zombies: Garden Warfare', '0,00', '8', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
+(173, 'https://howlongtobeat.com/games/FIFA_14.jpg', 'FIFA 14', '0,00', '82', 'PS3', 'HISTÓRIA', '', '115629454420567283308');
 
 --
 -- Índices para tabelas despejadas
@@ -156,7 +247,7 @@ ALTER TABLE `jogos`
 -- AUTO_INCREMENT de tabela `jogos`
 --
 ALTER TABLE `jogos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=174;
 
 --
 -- Restrições para despejos de tabelas
