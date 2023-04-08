@@ -163,15 +163,15 @@ app.get('/perfil', isLoggedIn,  (req, res) => {
 })
 
 app.get('/price/:nome', async (req, res) => {
-  let precojogo = await pesquisa_jogo(req.params.nome)
-  const link = `https://economia.awesomeapi.com.br/json/last/USD-BRL`;
-  request(link, (err, response, html) => {
-    if (!err) {
-      const json1 = JSON.parse(html);
-      res.send([{ dinheiro: precojogo*json1.USDBRL.high }]);
+  // let precojogo = await pesquisa_jogo(req.params.nome)
+  // const link = `https://economia.awesomeapi.com.br/json/last/USD-BRL`;
+  // request(link, (err, response, html) => {
+  //   if (!err) {
+  //     const json1 = JSON.parse(html);
+  //     res.send([{ dinheiro: precojogo*json1.USDBRL.high }]);
 
-    }
-  });
+  //   }
+  // });
   
 
   

@@ -67,7 +67,7 @@ database.getplatinas = async function (sessionid) {
   return rows;
 }
 database.gethoras = async function (sessionid) {
-  let [rows, fields] = await database.con.execute('SELECT SUM(tempo) as qtd FROM jogos WHERE progresso = "completo" OR progresso = "terminado" AND fk_jogador_id = ?', [sessionid]);
+  let [rows, fields] = await database.con.execute('SELECT SUM(tempo) as qtd FROM jogos WHERE progresso = "história" OR progresso = "terminado" AND fk_jogador_id = ?', [sessionid]);
 
   return rows;
 }
