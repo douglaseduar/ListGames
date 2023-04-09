@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08-Abr-2023 às 21:15
+-- Tempo de geração: 10-Abr-2023 às 01:24
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.4.27
 
@@ -220,7 +220,100 @@ INSERT INTO `jogos` (`id`, `htlb`, `nome`, `valor`, `tempo`, `plataforma`, `prog
 (170, 'https://howlongtobeat.com/games/Battlefield_4.jpg', 'Battlefield 4 ', '49,99', '6', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
 (171, 'https://howlongtobeat.com/games/Just_Dance_2014_Official_NTSC_Cover_Art.jpg', 'Just Dance 2014', '0,00', '5', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
 (172, 'https://howlongtobeat.com/games/Plants_vs._zombies_Garden_Warfare_cover.jpg', 'Plants vs. Zombies: Garden Warfare', '0,00', '8', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
-(173, 'https://howlongtobeat.com/games/FIFA_14.jpg', 'FIFA 14', '0,00', '82', 'PS3', 'HISTÓRIA', '', '115629454420567283308');
+(173, 'https://howlongtobeat.com/games/FIFA_14.jpg', 'FIFA 14', '0,00', '82', 'PS3', 'HISTÓRIA', '', '115629454420567283308'),
+(174, 'https://howlongtobeat.com/games/Grow_Home_header.jpg', 'Grow Home', '42,90', '3', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(175, 'https://howlongtobeat.com/games/Rocket_League_header.jpg', 'Rocket League', '0,00', '5', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(176, 'https://howlongtobeat.com/games/warthunder_keyart.jpg', 'War Thunder', '0,00', '10', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(177, 'https://howlongtobeat.com/games/PvZ_Garden_Warfare_2.jpg', 'Plants vs. Zombies: Garden Warfare 2', '220,00', '7', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(178, 'https://howlongtobeat.com/games/TowerFall_Ascension.jpg', 'TowerFall Ascension', '37,99', '4', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(179, 'https://howlongtobeat.com/games/Goat_Simulator.jpg', 'Goat Simulator', '10,00', '2', 'PS4', 'COMPLETO', '', '115629454420567283308'),
+(180, 'https://howlongtobeat.com/games/FIFA_16_cover.jpg', 'FIFA 16', '59,99', '52', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(181, 'https://howlongtobeat.com/games/Magicka_2_header.jpg', 'Magicka 2', '19,99', '6', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(182, 'https://howlongtobeat.com/games/70239_Uno_(2016).jpg', 'Uno', '19,99', '4', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(183, 'https://howlongtobeat.com/games/4064_Grand_Theft_Auto_V.jpg', 'Grand Theft Auto V', '100,00', '32', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(184, 'https://howlongtobeat.com/games/35859_Ratchet_&_Clank_(2016).jpg', 'Ratchet & Clank', '99,99', '10', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(185, 'https://howlongtobeat.com/games/Subnautica_header.jpg', 'Subnautica', '161,90', '30', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(186, 'https://howlongtobeat.com/games/1402571017-abzu-logo.jpg', 'ABZÛ', '37,99', '2', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(187, 'https://howlongtobeat.com/games/35549_Enter_the_Gungeon.jpg', 'Enter the Gungeon', '31,99', '22', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(188, 'https://howlongtobeat.com/games/48441_Moss.jpg', 'Moss', '99,50', '4', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(189, 'https://howlongtobeat.com/games/40535_Rez_Infinite.jpg', 'Rez Infinite', '159,90', '2', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(190, 'https://howlongtobeat.com/games/250px-The_witness_poster.jpg', 'The Witness', '200,00', '17', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(191, 'https://howlongtobeat.com/games/40500_Thumper.jpg', 'Thumper', '99,99', '8', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(192, 'https://howlongtobeat.com/games/40715_Sniper_Elite_4.jpg', 'Sniper Elite 4', '37,99', '11', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(193, 'https://howlongtobeat.com/games/Horizon-Zero-Dawn-feat.jpg', 'Horizon Zero Dawn', '99,99', '22', 'PS5', 'COMPLETO', '', '115629454420567283308'),
+(194, 'https://howlongtobeat.com/games/57518_Overcooked_2.jpeg', 'Overcooked 2', '79,99', '7', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(195, 'https://howlongtobeat.com/games/67361_Man_of_Medan.jpg', 'The Dark Pictures: Man of Medan', '59,99', '4', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(196, 'https://howlongtobeat.com/games/98586_Nickelodeon_All_Star.jpg', 'Nickelodeon All-Star Brawl', '249,00', '1', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(197, 'https://howlongtobeat.com/games/93486_Tribes_of_Midgard.jpg', 'Tribes of Midgard', '99,99', '15', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(198, 'https://howlongtobeat.com/games/75585_Curse_of_the_Dead_Gods.jpg', 'Curse of the Dead Gods', '100,00', '22', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(199, 'https://howlongtobeat.com/games/MetalGearSolid5_2013.jpg', 'Metal Gear Solid V: The Phantom Pain', '19,99', '46', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(200, 'https://howlongtobeat.com/games/Infamous_second_son_boxart.jpg', 'inFAMOUS: Second Son', '100,00', '10', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(201, 'https://howlongtobeat.com/games/LittleBigPlanet_3_boxart.jpg', 'LittleBigPlanet 3', '37,99', '6', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(202, 'https://howlongtobeat.com/games/95455_Arcadegeddon.jpg', 'Arcadegeddon', '99,99', '6', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(203, 'https://howlongtobeat.com/games/Just_Cause_3_cover_art.jpg', 'Just Cause 3', '59,99', '18', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(204, 'https://howlongtobeat.com/games/Broforce_292x136.jpg', 'Broforce', '37,99', '7', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(205, 'https://howlongtobeat.com/games/38050_God_of_War.jpg', 'God of War', '59,99', '21', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(206, 'https://howlongtobeat.com/games/This_War_of_Mine_header.jpg', 'This War of Mine', '100,00', '11', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(207, 'https://howlongtobeat.com/games/98260_FIFA_22.jpg', 'FIFA 22', '200,00', '50', 'PS5', 'HISTÓRIA', '', '115629454420567283308'),
+(208, 'https://howlongtobeat.com/games/80317_Crash_Bandicoot_4_Its_About_Time.jpg', 'Crash Bandicoot 4: It\'s About Time', '200,00', '10', 'PS5', 'HISTÓRIA', '', '115629454420567283308'),
+(209, 'https://howlongtobeat.com/games/worms-battlegrounds-logo.jpg', 'Worms Battlegrounds', '133,00', '10', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(210, 'https://howlongtobeat.com/games/61474_Naruto_to_Boruto_Shinobi_Striker.jpg', 'Naruto to Boruto: Shinobi Striker', '250,00', '7', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(211, 'https://howlongtobeat.com/games/78213_Tony_Hawks_Pro_Skater_1__2.jpg', 'Tony Hawk\'s Pro Skater 1   2', '200,00', '7', 'PS5', 'HISTÓRIA', '', '115629454420567283308'),
+(212, 'https://howlongtobeat.com/games/71931_Yakuza_Like_a_Dragon.jpg', 'Yakuza: Like a Dragon', '200,00', '45', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(213, 'https://howlongtobeat.com/games/39417_Little_Nightmares.jpg', 'Little Nightmares', '59,99', '4', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(214, 'https://howlongtobeat.com/games/69695_Need_For_Speed_Heat.jpg', 'Need For Speed Heat', '200,00', '13', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(215, 'https://howlongtobeat.com/games/68361_Granblue_Fantasy_Versus.jpg', 'Granblue Fantasy: Versus', '100,00', '5', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(216, 'https://howlongtobeat.com/games/86977_Toem.jpg', 'Toem', '37,99', '3', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(217, 'https://howlongtobeat.com/games/68270_Fall_Guys.jpg', 'Fall Guys', '0,00', '9', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(218, 'https://howlongtobeat.com/games/79775_Horizon_Forbidden_West.jpg', 'Horizon Forbidden West', '200,00', '29', 'PS5', 'COMPLETO', '', '115629454420567283308'),
+(219, 'https://howlongtobeat.com/games/116471_Call_of_Duty_Warzone_2.0.jpg', 'Call of Duty: Warzone 2.0', '0,00', '0', 'PS5', 'HISTÓRIA', 'ogalopeida', '115629454420567283308'),
+(220, 'https://howlongtobeat.com/games/89344_Hot_Wheels_Unleashed.jpg', 'Hot Wheels Unleashed', '47,99', '9', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(221, 'https://howlongtobeat.com/games/37862_Injustice_2.jpg', 'Injustice 2', '100,00', '6', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(222, 'https://howlongtobeat.com/games/superhot-splash-logoless.jpg', 'SUPERHOT', '37,99', '2', 'PS5', 'HISTÓRIA', '', '115629454420567283308'),
+(223, 'https://howlongtobeat.com/games/80199_It_Takes_Two.jpg', 'It Takes Two', '90,99', '12', 'PS5', 'HISTÓRIA', '', '115629454420567283308'),
+(224, 'https://howlongtobeat.com/games/94137_Overwatch_2.png', 'Overwatch 2', '0,00', '43', 'PS5', 'HISTÓRIA', 'ogalopeida', '115629454420567283308'),
+(225, 'https://howlongtobeat.com/games/The_Sims_4_Box_Art.jpg', 'The Sims 4', '100,00', '19', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(226, 'https://howlongtobeat.com/games/60877_Nioh_2.jpg', 'Nioh 2', '200,00', '45', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(227, 'https://howlongtobeat.com/games/47803_Lego_Harry_Potter_Collection.jpg', 'LEGO Harry Potter Collection', '129,99', '26', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(228, 'https://howlongtobeat.com/games/95410_Heavenly_Bodies.jpg', 'Heavenly Bodies', '100,00', '5', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(229, 'https://howlongtobeat.com/games/84851_Mass_Effect_Legendary_Edition.jpg', 'Mass Effect Legendary Edition', '290,00', '60', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(230, 'https://howlongtobeat.com/games/48568_BIOMUTANT.jpg', 'Biomutant', '200,00', '12', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(231, 'https://howlongtobeat.com/games/117972_Divine_Knockout.jpg', 'Divine Knockout', '59,99', '0', 'PS5', 'NÃO JOGUEI', 'ogalopeida', '115629454420567283308'),
+(232, 'https://howlongtobeat.com/games/Batman_Arkham_Knight_Cover_Art.jpg', 'Batman: Arkham Knight', '59,99', '16', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(233, 'https://howlongtobeat.com/games/101083_UNCHARTED_Legacy_of_Thieves_Collection.jpg', 'Uncharted: Legacy of Thieves Collection', '250,00', '21', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(234, 'https://howlongtobeat.com/games/31388_Detroit_Become_Human.jpg', 'Detroit: Become Human', '59,99', '12', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(235, 'https://howlongtobeat.com/games/38003_Days_Gone.jpg', 'Days Gone', '200,00', '36', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(236, 'https://howlongtobeat.com/games/COD_Black_Ops_3.jpg', 'Call of Duty: Black Ops III', '100,00', '9', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(237, 'https://howlongtobeat.com/games/256px-TheLastGuardian.jpg', 'The Last Guardian', '100,00', '12', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(238, 'https://howlongtobeat.com/games/38001_Battlefield_1.jpg', 'Battlefield 1', '100,00', '7', 'PS4', 'HISTÓRIA', 'ogalopeida', '115629454420567283308'),
+(239, 'https://howlongtobeat.com/games/38051_Resident_Evil_VII.jpg', 'Resident Evil 7: Biohazard', '100,00', '9', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(240, 'https://howlongtobeat.com/games/52493_Monster_Hunter_World.jpg', 'Monster Hunter: World', '79,99', '48', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(241, 'https://howlongtobeat.com/games/3537_Final_Fantasy_XV.jpg', 'Final Fantasy XV', '100,00', '28', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(242, 'https://howlongtobeat.com/games/Fallout_4.jpg', 'Fallout 4', '100,00', '27', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(243, 'https://howlongtobeat.com/games/46381_Crash_Bandicoot_N_Sane_Trilogy.jpg', 'Crash Bandicoot N. Sane Trilogy', '200,00', '15', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(244, 'https://howlongtobeat.com/games/57416_Fallout_76.jpg', 'Fallout 76', '200,00', '32', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(245, 'https://howlongtobeat.com/games/72785_Axiom_Verge_2.jpg', 'Axiom Verge 2', '100,00', '9', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(246, 'https://howlongtobeat.com/games/Bloodborne_Cover_Wallpaper.jpg', 'Bloodborne', '100,00', '33', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(247, 'https://howlongtobeat.com/games/21924_Until_Dawn.jpg', 'Until Dawn', '100,00', '8', 'PS4', 'NÃO JOGUEI', '', '115629454420567283308'),
+(248, 'https://howlongtobeat.com/games/TheLastofUsRemastered.jpg', 'The Last of Us Remastered', '100,00', '15', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(249, 'https://howlongtobeat.com/games/85971_Evil_Dead_The_Game.jpg', 'Evil Dead: The Game', '200,00', '4', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(250, 'https://howlongtobeat.com/games/78135_Mafia_Definitive_Edition.jpg', 'Mafia: Definitive Edition', '150,00', '11', 'PS5', 'HISTÓRIA', '', '115629454420567283308'),
+(251, 'https://howlongtobeat.com/games/91070_OlliOlli_World.jpg', 'OlliOlli World', '150,00', '6', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(252, 'https://howlongtobeat.com/games/10270_The_Witcher_3_Wild_Hunt.jpg', 'The Witcher 3: Wild Hunt', '100,00', '51', 'PS5', 'HISTÓRIA', '', '115629454420567283308'),
+(253, 'https://howlongtobeat.com/games/93426_Battlefield_2042.jpg', 'Battlefield 2042', '200,00', '61', 'PS5', 'NÃO JOGUEI', 'ogalopeida', '115629454420567283308'),
+(254, 'https://howlongtobeat.com/games/68149_Minecraft_Dungeons.jpg', 'Minecraft Dungeons', '79,99', '5', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(255, 'https://howlongtobeat.com/games/46470_Code_Vein.png', 'Code Vein', '300,00', '26', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(256, 'https://howlongtobeat.com/games/113537_Meet_Your_Maker.jpg', 'Meet Your Maker', '150,00', '0', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(257, 'https://howlongtobeat.com/games/80125_Sackboy_A_Big_Adventure.jpg', 'Sackboy: A Big Adventure', '100,00', '10', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(258, 'https://howlongtobeat.com/games/96877_Tails_of_Iron.jpg', 'Tails of Iron', '100,00', '7', 'PS5', 'NÃO JOGUEI', '', '115629454420567283308'),
+(259, 'https://howlongtobeat.com/games/83361_Astros_Playroom.jpg', 'Astro\'s Playroom', '0,00', '3', 'PS5', 'COMPLETO', '', '115629454420567283308'),
+(260, 'https://howlongtobeat.com/games/64996_Far_Cry_New_Dawn.jpg', 'Far Cry New Dawn', '70,99', '11', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(261, 'https://howlongtobeat.com/games/49957_Gran_Turismo_Sport.jpg', 'Gran Turismo Sport', '100,00', '25', 'PS5', 'HISTÓRIA', '', '115629454420567283308'),
+(262, 'https://howlongtobeat.com/games/57525_Just_Cause_4.jpg', 'Just Cause 4', '37,99', '16', 'PS5', 'COMPLETO', '', '115629454420567283308'),
+(263, 'https://howlongtobeat.com/games/37861_Watch_Dogs_2.jpg', 'Watch Dogs 2', '200,00', '19', 'PS4', 'COMPLETO', '', '115629454420567283308'),
+(264, 'https://howlongtobeat.com/games/Rainbow_Six_siege_photo_2014-06-14_17-51.jpg', 'Tom Clancy\'s Rainbow Six Siege', '200,00', '3', 'PC-UBISOFT', 'COMPLETO', 'odougrazzz', '115629454420567283308'),
+(265, 'https://howlongtobeat.com/games/256px-Dying_Light_cover.jpg', 'Dying Light', '100,00', '17', 'PS4', 'HISTÓRIA', '', '115629454420567283308'),
+(266, 'https://howlongtobeat.com/games/Destiny_box_art.png', 'Destiny', '100,00', '12', 'PS4', 'HISTÓRIA', '', '115629454420567283308');
 
 --
 -- Índices para tabelas despejadas
@@ -247,7 +340,7 @@ ALTER TABLE `jogos`
 -- AUTO_INCREMENT de tabela `jogos`
 --
 ALTER TABLE `jogos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=174;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=267;
 
 --
 -- Restrições para despejos de tabelas
