@@ -133,6 +133,22 @@ app.get('/cadastro', isLoggedIn,  (req, res) => {
 
     }]);
   })
+  app.get('/dados1', isLoggedIn,  async (req, res) => {
+
+    let todo = await database.gettodos1(req.user.id);
+    let platina = await database.getplatinas1(req.user.id);
+    let hora = await database.gethoras1(req.user.id);
+    let valor = await database.getvalores1(req.user.id);
+    res.send([{
+      nome: req.user.displayName,
+      foto: req.user.picture, 
+      todos: todo.length, 
+      platinas: platina.length,
+      horas: hora[0].qtd + "h",
+      valores: 'R$' + valor[0].quanto
+
+    }]);
+  })
 
   app.get('/getjogosc', isLoggedIn,  async (req, res) => {
     res.send(await database.getjogosc(req.user.id));
@@ -142,6 +158,9 @@ app.get('/cadastro', isLoggedIn,  (req, res) => {
   })
   app.get('/getjogosn', isLoggedIn,  async (req, res) => {
     res.send(await database.getjogosn(req.user.id));
+  })
+  app.get('/getjogosa', isLoggedIn,  async (req, res) => {
+    res.send(await database.getjogosa(req.user.id));
   })
 
 app.get('/pesqjogo/:jogo', isLoggedIn, (req, res) => {

@@ -119,10 +119,20 @@
     border-radius: 0px 0px 30px 30px;
   }
 
-  .jplatinado, .jplatinado1, .jplatinado2{
+  .jplatinado, .jplatinado1, .jplatinado2, .jplatinado9{
     background-color: gainsboro;
     width: 98%;
     height: 2px;
     cursor: pointer;
     transition: 1ms;
+  }
+  .card-img-top{
+    min-height: 250px;
+
+  }
+  .gift{
+    position: absolute;
+    left: 90%;
+    font-size: 17pt;
+    cursor: pointer;
   }

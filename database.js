@@ -40,18 +40,28 @@ database.gettodos = async function (sessionid) {
 
   return rows;
 }
+database.gettodos1 = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND comprado = 1', [sessionid]);
+
+  return rows;
+}
 database.getjogosc = async function (sessionid) {
-  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND progresso = "COMPLETO" ORDER BY nome', [sessionid]);
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND progresso = "COMPLETO" AND NOT jogando = 1 ORDER BY nome', [sessionid]);
 
   return rows;
 }
 database.getjogosn = async function (sessionid) {
-  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND progresso = "NÃO JOGUEI" ORDER BY nome', [sessionid]);
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND progresso = "NÃO JOGUEI" AND NOT jogando = 1 ORDER BY nome', [sessionid]);
 
   return rows;
 }
 database.getjogost = async function (sessionid) {
-  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND progresso = "HISTÓRIA" ORDER BY nome', [sessionid]);
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND progresso = "HISTÓRIA" AND NOT jogando = 1 ORDER BY nome', [sessionid]);
+
+  return rows;
+}
+database.getjogosa = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE fk_jogador_id = ? AND jogando = 1 ORDER BY nome', [sessionid]);
 
   return rows;
 }
@@ -66,13 +76,28 @@ database.getplatinas = async function (sessionid) {
 
   return rows;
 }
+database.getplatinas1 = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT * FROM jogos WHERE progresso = "completo" AND fk_jogador_id = ? AND comprado = 1', [sessionid]);
+
+  return rows;
+}
 database.gethoras = async function (sessionid) {
-  let [rows, fields] = await database.con.execute('SELECT SUM(tempo) as qtd FROM jogos WHERE progresso = "história" OR progresso = "terminado" AND fk_jogador_id = ?', [sessionid]);
+  let [rows, fields] = await database.con.execute('SELECT SUM(tempo) as qtd FROM jogos WHERE progresso = "história" OR progresso = "COMPLETO" AND fk_jogador_id = ?', [sessionid]);
+
+  return rows;
+}
+database.gethoras1 = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT SUM(tempo) as qtd FROM jogos WHERE progresso = "história" OR progresso = "COMPLETO" AND fk_jogador_id = ? AND comprado = 1', [sessionid]);
 
   return rows;
 }
 database.getvalores = async function (sessionid) {
   let [rows, fields] = await database.con.execute('SELECT SUM(valor) as quanto FROM jogos WHERE fk_jogador_id = ?', [sessionid]);
+
+  return rows;
+}
+database.getvalores1 = async function (sessionid) {
+  let [rows, fields] = await database.con.execute('SELECT SUM(valor) as quanto FROM jogos WHERE fk_jogador_id = ? AND comprado = 1', [sessionid]);
 
   return rows;
 }
