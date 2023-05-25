@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="lista.css">
+    <script src="lista.js" defer></script>
+    <title>Perfil</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/626/626540.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light" style="place-content: center;">
+        <form class="form-inline" id="pesquisar">
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" placeholder="Procurar por jogos"
+                    aria-describedby="button-addon2" name="consultajogo">
+                <button class="btn btn-outline-success" type="submit" id="button-addon2"
+                    style="padding: 0px 10px!important;font-size: 18pt;"><i
+                        class="bi bi-arrow-right-circle-fill"></i></button>
+            </div>
+        </form>
+    </nav>
+
+    <div class="background">
+    <div class="menu hadow-lg rounded">
+        <div class="gift"><i class="bi bi-gift-fill"></i></div>
+        <img src="https://avatars.githubusercontent.com/u/64625746?v=4" width="110" id="fotomenu" alt="" srcset="">
+        <h2 class="nome pt-2"></h2>
+        <h2 class="pt-2" style="font-size: 5pt;">--------------------------------------------------------------------------</h2>
+        <div class="numeros pt-2">
+            <div class="jogos"></div>
+            <div class="platina"></div>
+            <div class="valor"></div>
+            <div class="tempo"></div>
+          </div>
+          <div class="novo"><h6> CADASTRAR NOVO JOGO</h6> <a href="/cadastro"><i class="bi bi-plus-circle" style="font-size: 22pt; color: black;"></i></a></div>
+    </div>
+    <div class="lista1">
+    <div class="jplatinado9 mt-2"><h5> JOGANDO AGORA <i class="bi bi-caret-down-fill" id="flechaa"></i></h5></div>
+    <div class="lista row row-cols-1 row-cols-md-5 g-3 mt-3" id="listaa">
+    </div>    
+    <div class="jplatinado mt-5"><h5> COMPLETOS <i class="bi bi-caret-down-fill" id="flechac"></i></h5></div>
+    <div class="lista row row-cols-1 row-cols-md-5 g-3 mt-3" id="listac">
+    </div>
+    <div class="jplatinado1 mt-5"><h5> APENAS HISTÓRIA <i class="bi bi-caret-down-fill" id="flechat"></i></h5></div>
+    <div class="lista row row-cols-1 row-cols-md-5 g-3 mt-3" id="listat">
+    </div>
+    <div class="jplatinado2 mt-5"><h5> NUNCA JOGADO <i class="bi bi-caret-down-fill" id="flechan"></i></h5></div>
+    <div class="lista row row-cols-1 row-cols-md-5 g-3 mt-3" id="listan">
+    </div>
+    </div>
+</div>
+</body>
+</html>

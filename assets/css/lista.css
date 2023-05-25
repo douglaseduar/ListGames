@@ -1,0 +1,138 @@
+.menu{
+    background-color: rgb(20, 20, 20);
+    border-radius: 30px;
+    height: 500px;
+    max-width: 300px;
+    margin-left: 30px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    min-width: 300px;
+      
+}
+.nome{
+    text-transform: uppercase;
+}
+
+#fotomenu{
+    border-radius: 300px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+.numeros {   
+     display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 30px 10px; 
+    grid-template-areas: 
+    "jogos platina"
+    "valor valor"
+    "tempo tempo"; 
+      font-size: 25pt;
+  }
+  .jogos { grid-area: jogos; }
+  .platina { grid-area: platina; }
+  .valor { grid-area: valor; }
+  .tempo { grid-area: tempo; }
+
+  .background {  display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    gap: px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "menu lista";
+  }
+  
+  .menu { grid-area: menu; }
+  
+  .lista1 { grid-area: lista; 
+   }
+  .lista{
+    /* grid-row-gap: 350px; */
+    content-visibility: visible;
+  }
+  .card-img-top{
+    max-height: 250px;
+    max-width: 250px;
+    border-radius: 5px;
+  }
+  .plata{
+    text-transform: uppercase;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    padding: 5px 13px;
+    width: fit-content;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 30px 0px 0px 30px;
+
+  }
+  .front, .back{
+    position: absolute;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+  }
+  .front {
+    transform: rotateY(0deg);
+  }
+  .back {
+    transform: rotateY(180deg);
+
+  }
+  .cardback{
+    background-color: rgb(20, 20, 20);
+    color: white;
+    height: 316px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 50px;
+    cursor: grab;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .conteudo:hover .front {
+    transform: rotateY(-180deg);
+  }
+  .conteudo:hover .back {
+    transform: rotateY(0deg);
+  }
+  .conteudo{
+    position: relative;
+    perspective: 1000px;
+    height: 360px;
+  }
+
+  .novo{
+    background-color: gainsboro;
+    color: rgb(20, 20, 20);
+    margin-top: 25px;
+    position: fixed;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    width: 300px;
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .jplatinado, .jplatinado1, .jplatinado2, .jplatinado9{
+    background-color: gainsboro;
+    width: 98%;
+    height: 2px;
+    cursor: pointer;
+    transition: 1ms;
+  }
+  .card-img-top{
+    min-height: 250px;
+
+  }
+  .gift{
+    position: absolute;
+    left: 90%;
+    font-size: 17pt;
+    cursor: pointer;
+  }

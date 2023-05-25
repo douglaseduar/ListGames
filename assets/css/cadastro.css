@@ -1,0 +1,19 @@
+.peq{
+    margin-left: -10px;
+}
+.botao{
+    cursor: pointer;
+}
+.botao:hover{
+    color: gray;
+    scale: 1.2;
+    -webkit-transition: 0.3s ease-in;
+}
+.bi-plus-circle {
+    font-size: 53pt;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
